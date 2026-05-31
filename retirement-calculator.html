@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retirement Calculator - VestCalc</title>
+<meta name="description" content="Free retirement calculator. Plan your retirement savings, estimate your nest egg, and find out if you're on track to retire comfortably.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDVND7BVGL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EDVND7BVGL');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#0d9488;--primary-dark:#0f766e;--primary-light:#ccfbf1;--primary-dim:rgba(13,148,136,.1);--bg:#f8fafc;--bg2:#ffffff;--text:#0f172a;--text2:#475569;--text3:#94a3b8;--border:#e2e8f0;--radius:12px;--radius-sm:8px;--shadow:0 1px 3px rgba(0,0,0,.08)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{background:var(--bg2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:32px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:20px;height:20px;fill:#fff}
+.logo-name{font-size:22px;font-weight:800;color:var(--text);letter-spacing:-.5px}
+.logo-name span{color:var(--primary)}
+nav{display:flex;align-items:center;gap:4px;flex:1}
+nav a{padding:6px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:all .15s}
+nav a:hover{color:var(--primary);background:var(--primary-dim)}
+.nav-cta{margin-left:auto;padding:8px 18px;background:var(--primary);color:#fff!important;border-radius:var(--radius-sm);font-size:14px;font-weight:600;text-decoration:none;transition:background .15s}
+.nav-cta:hover{background:var(--primary-dark)!important}
+.page-hero{background:linear-gradient(135deg,#0f766e 0%,#0d9488 50%,#14b8a6 100%);color:#fff;padding:48px 20px;text-align:center}
+.page-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin-bottom:8px}
+.page-hero p{font-size:15px;opacity:.9;max-width:500px;margin:0 auto}
+main{max-width:900px;margin:0 auto;padding:40px 20px 80px}
+.ad-slot{background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:var(--text3);font-size:13px;margin:32px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+.calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:24px}
+.calc-card h2{font-size:1.2rem;font-weight:700;margin-bottom:24px;color:var(--text)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:13px;font-weight:600;color:var(--text2)}
+.form-group input{padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:15px;color:var(--text);background:var(--bg);outline:none;transition:border .15s}
+.form-group input:focus{border-color:var(--primary)}
+.input-wrap{position:relative}
+.input-prefix{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--text3);pointer-events:none}
+.input-wrap input{padding-left:26px}
+.input-suffix{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--text3);pointer-events:none}
+.input-wrap.has-suffix input{padding-right:30px}
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.result-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;text-align:center}
+.result-box .label{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.result-box .value{font-size:1.4rem;font-weight:800;color:var(--primary)}
+.result-box.highlight{background:var(--primary);border-color:var(--primary)}
+.result-box.highlight .label{color:rgba(255,255,255,.8)}
+.result-box.highlight .value{color:#fff}
+.status-banner{padding:16px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;margin-top:20px;display:flex;align-items:center;gap:10px}
+.status-banner.good{background:#d1fae5;color:#065f46;border:1px solid #a7f3d0}
+.status-banner.warn{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
+.status-banner.bad{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--primary);text-decoration:none}
+footer{background:var(--text);color:#94a3b8;padding:40px 20px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.footer-logo{font-size:18px;font-weight:800;color:#fff}
+.footer-logo span{color:var(--primary)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:#94a3b8;text-decoration:none;font-size:13px;transition:color .15s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:13px;width:100%}
+@media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <span class="logo-name">Vest<span>Calc</span></span>
+    </a>
+    <nav><a href="/">Home</a><a href="/#calculators">Calculators</a><a href="/" class="nav-cta">All Tools</a></nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Retirement Calculator</h1>
+  <p>Find out if you're on track for retirement and how much you need to save.</p>
+</div>
+
+<main>
+  <div class="breadcrumb"><a href="/">Home</a> › Retirement Calculator</div>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="calc-card">
+    <h2>Your Retirement Details</h2>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Current Age</label>
+        <div class="input-wrap has-suffix"><input type="number" id="age" value="35" min="18" max="80" oninput="calc()"><span class="input-suffix">yrs</span></div>
+      </div>
+      <div class="form-group">
+        <label>Retirement Age</label>
+        <div class="input-wrap has-suffix"><input type="number" id="ret-age" value="65" min="40" max="90" oninput="calc()"><span class="input-suffix">yrs</span></div>
+      </div>
+      <div class="form-group">
+        <label>Current Savings</label>
+        <div class="input-wrap"><span class="input-prefix">$</span><input type="number" id="savings" value="50000" min="0" oninput="calc()"></div>
+      </div>
+      <div class="form-group">
+        <label>Monthly Contribution</label>
+        <div class="input-wrap"><span class="input-prefix">$</span><input type="number" id="monthly" value="500" min="0" oninput="calc()"></div>
+      </div>
+      <div class="form-group">
+        <label>Expected Annual Return</label>
+        <div class="input-wrap has-suffix"><input type="number" id="return" value="7" min="0" step="0.1" oninput="calc()"><span class="input-suffix">%</span></div>
+      </div>
+      <div class="form-group">
+        <label>Annual Inflation Rate</label>
+        <div class="input-wrap has-suffix"><input type="number" id="inflation" value="2.5" min="0" step="0.1" oninput="calc()"><span class="input-suffix">%</span></div>
+      </div>
+      <div class="form-group">
+        <label>Monthly Income Needed (today's $)</label>
+        <div class="input-wrap"><span class="input-prefix">$</span><input type="number" id="needed" value="4000" min="0" oninput="calc()"></div>
+      </div>
+      <div class="form-group">
+        <label>Retirement Duration</label>
+        <div class="input-wrap has-suffix"><input type="number" id="duration" value="25" min="5" max="50" oninput="calc()"><span class="input-suffix">yrs</span></div>
+      </div>
+    </div>
+
+    <div class="result-grid">
+      <div class="result-box highlight">
+        <div class="label">Projected Nest Egg</div>
+        <div class="value" id="r-nest">$0</div>
+      </div>
+      <div class="result-box highlight">
+        <div class="label">Savings Needed</div>
+        <div class="value" id="r-needed">$0</div>
+      </div>
+      <div class="result-box">
+        <div class="label">Monthly Income (at retirement)</div>
+        <div class="value" id="r-monthly">$0</div>
+      </div>
+      <div class="result-box">
+        <div class="label">Years Until Retirement</div>
+        <div class="value" id="r-years">0</div>
+      </div>
+    </div>
+    <div id="status-banner" class="status-banner good">You are on track for retirement.</div>
+  </div>
+
+  <div class="ad-slot">Advertisement</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Vest<span>Calc</span></div>
+    <div class="footer-links"><a href="/about.html">About</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/contact.html">Contact</a></div>
+    <p class="footer-copy">&copy; 2026 VestCalc. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n){return n.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0});}
+function calc(){
+  var age=parseInt(document.getElementById('age').value)||35;
+  var retAge=parseInt(document.getElementById('ret-age').value)||65;
+  var savings=parseFloat(document.getElementById('savings').value)||0;
+  var monthly=parseFloat(document.getElementById('monthly').value)||0;
+  var ret=parseFloat(document.getElementById('return').value)||0;
+  var inf=parseFloat(document.getElementById('inflation').value)||0;
+  var needed=parseFloat(document.getElementById('needed').value)||0;
+  var dur=parseInt(document.getElementById('duration').value)||25;
+  var years=Math.max(0,retAge-age);
+  var mr=ret/100/12;
+  var n=years*12;
+  var nest=savings*Math.pow(1+mr,n)+monthly*(Math.pow(1+mr,n)-1)/mr*(mr>0?1:0);
+  if(mr===0)nest=savings+monthly*n;
+  var inflFactor=Math.pow(1+inf/100,years);
+  var neededAtRet=needed*12*inflFactor;
+  var realRate=(ret-inf)/100;
+  var neededNest;
+  if(realRate>0){neededNest=neededAtRet*(1-Math.pow(1+realRate,-dur))/realRate;}
+  else{neededNest=neededAtRet*dur;}
+  var monthlyAtRet=nest>0?(nest*realRate/(1-Math.pow(1+realRate,-dur)))/12:0;
+  if(realRate<=0)monthlyAtRet=nest/(dur*12);
+  document.getElementById('r-nest').textContent='$'+fmt(nest);
+  document.getElementById('r-needed').textContent='$'+fmt(neededNest);
+  document.getElementById('r-monthly').textContent='$'+fmt(monthlyAtRet);
+  document.getElementById('r-years').textContent=years+' yrs';
+  var banner=document.getElementById('status-banner');
+  var pct=neededNest>0?nest/neededNest:1;
+  if(pct>=1){banner.className='status-banner good';banner.textContent='✓ Great! You are on track to meet your retirement goal.';}
+  else if(pct>=0.7){banner.className='status-banner warn';banner.textContent='⚠ You may fall short. Consider increasing contributions or adjusting your goal.';}
+  else{banner.className='status-banner bad';banner.textContent='✗ Significant shortfall projected. Increase savings or adjust retirement expectations.';}
+}
+calc();
+</script>
+</body>
+</html>

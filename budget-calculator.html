@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Calculator - VestCalc</title>
+<meta name="description" content="Free budget calculator. Track your monthly income and expenses, calculate your savings rate, and find opportunities to save more.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDVND7BVGL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EDVND7BVGL');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#0d9488;--primary-dark:#0f766e;--primary-light:#ccfbf1;--primary-dim:rgba(13,148,136,.1);--bg:#f8fafc;--bg2:#ffffff;--text:#0f172a;--text2:#475569;--text3:#94a3b8;--border:#e2e8f0;--radius:12px;--radius-sm:8px;--shadow:0 1px 3px rgba(0,0,0,.08)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{background:var(--bg2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:32px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:20px;height:20px;fill:#fff}
+.logo-name{font-size:22px;font-weight:800;color:var(--text);letter-spacing:-.5px}
+.logo-name span{color:var(--primary)}
+nav{display:flex;align-items:center;gap:4px;flex:1}
+nav a{padding:6px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:all .15s}
+nav a:hover{color:var(--primary);background:var(--primary-dim)}
+.nav-cta{margin-left:auto;padding:8px 18px;background:var(--primary);color:#fff!important;border-radius:var(--radius-sm);font-size:14px;font-weight:600;text-decoration:none;transition:background .15s}
+.nav-cta:hover{background:var(--primary-dark)!important}
+.page-hero{background:linear-gradient(135deg,#0f766e 0%,#0d9488 50%,#14b8a6 100%);color:#fff;padding:48px 20px;text-align:center}
+.page-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin-bottom:8px}
+.page-hero p{font-size:15px;opacity:.9;max-width:500px;margin:0 auto}
+main{max-width:900px;margin:0 auto;padding:40px 20px 80px}
+.ad-slot{background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:var(--text3);font-size:13px;margin:32px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+.calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:24px}
+.calc-card h2{font-size:1.2rem;font-weight:700;margin-bottom:20px;color:var(--text)}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.section-header h3{font-size:14px;font-weight:700;color:var(--text2)}
+.btn-add{padding:6px 14px;background:var(--primary-dim);color:var(--primary);border:1px solid var(--primary);border-radius:var(--radius-sm);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-add:hover{background:var(--primary);color:#fff}
+.row-list{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.budget-row{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center}
+.budget-row input[type=text],.budget-row input[type=number]{padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:14px;color:var(--text);background:var(--bg);outline:none;width:100%}
+.budget-row input[type=text]:focus,.budget-row input[type=number]:focus{border-color:var(--primary)}
+.budget-row input[type=number]{max-width:120px}
+.btn-remove{padding:6px 10px;background:none;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text3);cursor:pointer;font-size:14px;transition:all .15s;flex-shrink:0}
+.btn-remove:hover{border-color:#dc2626;color:#dc2626}
+.divider{border:none;border-top:1px solid var(--border);margin:24px 0}
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.result-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;text-align:center}
+.result-box .label{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.result-box .value{font-size:1.4rem;font-weight:800;color:var(--primary)}
+.result-box.highlight{background:var(--primary);border-color:var(--primary)}
+.result-box.highlight .label{color:rgba(255,255,255,.8)}
+.result-box.highlight .value{color:#fff}
+.result-box.surplus .value{color:#059669}
+.result-box.deficit .value{color:#dc2626}
+.breadcrumb{font-size:13px;color:var(--text3);margin-bottom:24px}
+.breadcrumb a{color:var(--primary);text-decoration:none}
+footer{background:var(--text);color:#94a3b8;padding:40px 20px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.footer-logo{font-size:18px;font-weight:800;color:#fff}
+.footer-logo span{color:var(--primary)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:#94a3b8;text-decoration:none;font-size:13px;transition:color .15s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:13px;width:100%}
+@media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.result-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <span class="logo-name">Vest<span>Calc</span></span>
+    </a>
+    <nav><a href="/">Home</a><a href="/#calculators">Calculators</a><a href="/" class="nav-cta">All Tools</a></nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Budget Calculator</h1>
+  <p>Track your monthly income and expenses to see exactly where your money goes.</p>
+</div>
+
+<main>
+  <div class="breadcrumb"><a href="/">Home</a> › Budget Calculator</div>
+  <div class="ad-slot">Advertisement</div>
+
+  <div class="calc-card">
+    <h2>Monthly Budget</h2>
+
+    <div class="section-header">
+      <h3>Income</h3>
+      <button class="btn-add" onclick="addRow('income')">+ Add Income</button>
+    </div>
+    <div class="row-list" id="income-rows"></div>
+
+    <hr class="divider">
+
+    <div class="section-header">
+      <h3>Expenses</h3>
+      <button class="btn-add" onclick="addRow('expense')">+ Add Expense</button>
+    </div>
+    <div class="row-list" id="expense-rows"></div>
+
+    <div class="result-grid">
+      <div class="result-box highlight">
+        <div class="label">Total Income</div>
+        <div class="value" id="r-income">$0</div>
+      </div>
+      <div class="result-box highlight">
+        <div class="label">Total Expenses</div>
+        <div class="value" id="r-expense">$0</div>
+      </div>
+      <div class="result-box" id="balance-box">
+        <div class="label">Net Balance</div>
+        <div class="value" id="r-balance">$0</div>
+      </div>
+      <div class="result-box">
+        <div class="label">Savings Rate</div>
+        <div class="value" id="r-rate">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot">Advertisement</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Vest<span>Calc</span></div>
+    <div class="footer-links"><a href="/about.html">About</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/contact.html">Contact</a></div>
+    <p class="footer-copy">&copy; 2026 VestCalc. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+var incomeRows=[{label:'Salary',amount:4500},{label:'Side Income',amount:500}];
+var expenseRows=[{label:'Rent/Mortgage',amount:1400},{label:'Groceries',amount:400},{label:'Utilities',amount:150},{label:'Transportation',amount:200},{label:'Entertainment',amount:100}];
+function fmt(n){return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function render(type){
+  var arr=type==='income'?incomeRows:expenseRows;
+  var container=document.getElementById(type+'-rows');
+  container.innerHTML='';
+  arr.forEach(function(row,i){
+    var div=document.createElement('div');
+    div.className='budget-row';
+    div.innerHTML='<input type="text" placeholder="Label" value="'+row.label+'" oninput="updateRow(\''+type+'\','+i+',\'label\',this.value)"><input type="number" placeholder="Amount" value="'+row.amount+'" min="0" step="0.01" oninput="updateRow(\''+type+'\','+i+',\'amount\',this.value)"><button class="btn-remove" onclick="removeRow(\''+type+'\','+i+')">✕</button>';
+    container.appendChild(div);
+  });
+  calcTotals();
+}
+function addRow(type){
+  if(type==='income')incomeRows.push({label:'',amount:0});
+  else expenseRows.push({label:'',amount:0});
+  render(type);
+}
+function removeRow(type,i){
+  if(type==='income')incomeRows.splice(i,1);
+  else expenseRows.splice(i,1);
+  render(type);
+}
+function updateRow(type,i,field,val){
+  var arr=type==='income'?incomeRows:expenseRows;
+  arr[i][field]=field==='amount'?(parseFloat(val)||0):val;
+  calcTotals();
+}
+function calcTotals(){
+  var inc=incomeRows.reduce(function(s,r){return s+r.amount;},0);
+  var exp=expenseRows.reduce(function(s,r){return s+r.amount;},0);
+  var bal=inc-exp;
+  var rate=inc>0?bal/inc*100:0;
+  document.getElementById('r-income').textContent='$'+fmt(inc);
+  document.getElementById('r-expense').textContent='$'+fmt(exp);
+  document.getElementById('r-balance').textContent=(bal>=0?'$':'-$')+fmt(Math.abs(bal));
+  document.getElementById('r-rate').textContent=rate.toFixed(1)+'%';
+  var bb=document.getElementById('balance-box');
+  bb.className='result-box '+(bal>=0?'surplus':'deficit');
+}
+render('income');render('expense');
+</script>
+</body>
+</html>
