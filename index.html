@@ -78,6 +78,11 @@
   .tool-desc { font-size: 13px; color: var(--text2); line-height: 1.5; flex: 1; }
   .tool-link { font-size: 13px; font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 4px; }
 
+  /* ── CATEGORY TABS ── */
+  .cat-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+  .cat-tab{padding:7px 18px;border-radius:99px;font-size:13px;font-weight:600;border:1.5px solid var(--border);background:var(--bg2);color:var(--text2);cursor:pointer;transition:all .15s;white-space:nowrap;line-height:1}
+  .cat-tab:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-dim)}
+  .cat-tab.active{background:var(--primary);color:#fff;border-color:var(--primary)}
   /* ── SEARCH ── */
   .search-wrap { position: relative; margin-bottom: 24px; }
   .search-wrap input { width: 100%; padding: 12px 16px 12px 44px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 15px; color: var(--text); background: var(--bg2); outline: none; transition: border-color .15s; }
@@ -158,6 +163,15 @@
     <h2 class="section-title">Financial Calculators</h2>
     <p class="section-sub">Choose a calculator to get started — all free, no registration required.</p>
 
+    <div class="cat-tabs">
+      <button class="cat-tab active" data-cat="all" onclick="filterCat(this)">All</button>
+      <button class="cat-tab" data-cat="loans" onclick="filterCat(this)">Loans</button>
+      <button class="cat-tab" data-cat="mortgage" onclick="filterCat(this)">Mortgage &amp; Home</button>
+      <button class="cat-tab" data-cat="retirement" onclick="filterCat(this)">Retirement &amp; Investing</button>
+      <button class="cat-tab" data-cat="personal" onclick="filterCat(this)">Personal Finance</button>
+      <button class="cat-tab" data-cat="tax" onclick="filterCat(this)">Tax &amp; Payroll</button>
+      <button class="cat-tab" data-cat="analysis" onclick="filterCat(this)">Investment Analysis</button>
+    </div>
     <div class="search-wrap">
       <div class="search-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       <input type="text" id="calc-search" placeholder="Search calculators..." oninput="filterCards(this.value)" autocomplete="off">
@@ -166,7 +180,7 @@
 
     <div class="tool-grid">
 
-      <a href="/loan-calculator.html" class="tool-card">
+      <a href="/loan-calculator.html" class="tool-card" data-category="loans">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
         </div>
@@ -175,7 +189,7 @@
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/mortgage-calculator.html" class="tool-card">
+      <a href="/mortgage-calculator.html" class="tool-card" data-category="mortgage">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
@@ -184,7 +198,7 @@
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/compound-interest-calculator.html" class="tool-card">
+      <a href="/compound-interest-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         </div>
@@ -193,7 +207,7 @@
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/tax-calculator.html" class="tool-card">
+      <a href="/tax-calculator.html" class="tool-card" data-category="tax">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
         </div>
@@ -204,7 +218,7 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/retirement-calculator.html" class="tool-card">
+      <a href="/retirement-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
@@ -213,7 +227,7 @@
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/investment-return-calculator.html" class="tool-card">
+      <a href="/investment-return-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
         </div>
@@ -222,7 +236,7 @@
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/savings-goal-calculator.html" class="tool-card">
+      <a href="/savings-goal-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
         </div>
@@ -231,7 +245,7 @@
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/budget-calculator.html" class="tool-card">
+      <a href="/budget-calculator.html" class="tool-card" data-category="personal">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
         </div>
@@ -242,7 +256,7 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/currency-converter.html" class="tool-card">
+      <a href="/currency-converter.html" class="tool-card" data-category="personal">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
         </div>
@@ -251,7 +265,7 @@
         <span class="tool-link">Convert →</span>
       </a>
 
-      <a href="/percentage-calculator.html" class="tool-card">
+      <a href="/percentage-calculator.html" class="tool-card" data-category="personal">>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
         </div>
@@ -262,28 +276,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/car-loan-calculator.html" class="tool-card">
+      <a href="/car-loan-calculator.html" class="tool-card" data-category="loans">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
         <div class="tool-name">Car Loan Calculator</div>
         <div class="tool-desc">Calculate monthly car payments, total interest, and true cost of financing a vehicle.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/home-equity-calculator.html" class="tool-card">
+      <a href="/home-equity-calculator.html" class="tool-card" data-category="mortgage">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><line x1="9" y1="22" x2="9" y2="12"/><line x1="15" y1="12" x2="15" y2="22"/></svg></div>
         <div class="tool-name">Home Equity Calculator</div>
         <div class="tool-desc">Find out how much equity you have in your home and how much you can borrow.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/refinance-calculator.html" class="tool-card">
+      <a href="/refinance-calculator.html" class="tool-card" data-category="mortgage">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg></div>
         <div class="tool-name">Refinance Calculator</div>
         <div class="tool-desc">Compare your current mortgage to a new loan and find your break-even point.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/debt-payoff-calculator.html" class="tool-card">
+      <a href="/debt-payoff-calculator.html" class="tool-card" data-category="loans">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
         <div class="tool-name">Debt Payoff Calculator</div>
         <div class="tool-desc">See how long it takes to pay off debt and how much interest you will pay in total.</div>
@@ -292,28 +306,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/student-loan-calculator.html" class="tool-card">
+      <a href="/student-loan-calculator.html" class="tool-card" data-category="loans">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
         <div class="tool-name">Student Loan Calculator</div>
         <div class="tool-desc">Estimate monthly student loan payments and total repayment cost for any loan.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/personal-loan-calculator.html" class="tool-card">
+      <a href="/personal-loan-calculator.html" class="tool-card" data-category="loans">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg></div>
         <div class="tool-name">Personal Loan Calculator</div>
         <div class="tool-desc">Calculate monthly payments, total cost, and effective APR for any personal loan.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/down-payment-calculator.html" class="tool-card">
+      <a href="/down-payment-calculator.html" class="tool-card" data-category="mortgage">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
         <div class="tool-name">Down Payment Calculator</div>
         <div class="tool-desc">Calculate how much you need for a down payment and how long it will take to save.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/rent-vs-buy-calculator.html" class="tool-card">
+      <a href="/rent-vs-buy-calculator.html" class="tool-card" data-category="mortgage">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <div class="tool-name">Rent vs Buy Calculator</div>
         <div class="tool-desc">Compare the true financial cost of renting versus buying a home over any time horizon.</div>
@@ -322,28 +336,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/amortization-calculator.html" class="tool-card">
+      <a href="/amortization-calculator.html" class="tool-card" data-category="mortgage">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
         <div class="tool-name">Amortization Calculator</div>
         <div class="tool-desc">Generate a full payment schedule showing principal, interest, and balance each month.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/balloon-payment-calculator.html" class="tool-card">
+      <a href="/balloon-payment-calculator.html" class="tool-card" data-category="loans">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="7"/><path d="M12 17v4M9 21h6"/></svg></div>
         <div class="tool-name">Balloon Payment Calculator</div>
         <div class="tool-desc">Calculate balloon loan payments and the lump-sum amount due at loan maturity.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/401k-calculator.html" class="tool-card">
+      <a href="/401k-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="tool-name">401(k) Calculator</div>
         <div class="tool-desc">Project your 401(k) balance at retirement with contributions and employer match.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/roth-ira-calculator.html" class="tool-card">
+      <a href="/roth-ira-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
         <div class="tool-name">Roth IRA Calculator</div>
         <div class="tool-desc">Project your tax-free Roth IRA growth and accumulation by retirement age.</div>
@@ -352,28 +366,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/dividend-calculator.html" class="tool-card">
+      <a href="/dividend-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
         <div class="tool-name">Dividend Calculator</div>
         <div class="tool-desc">Calculate dividend income and project portfolio growth with DRIP reinvestment.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/stock-return-calculator.html" class="tool-card">
+      <a href="/stock-return-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
         <div class="tool-name">Stock Return Calculator</div>
         <div class="tool-desc">Calculate total stock return including capital gains, dividends, and annualized performance.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/emergency-fund-calculator.html" class="tool-card">
+      <a href="/emergency-fund-calculator.html" class="tool-card" data-category="personal">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div class="tool-name">Emergency Fund Calculator</div>
         <div class="tool-desc">Find out how large your emergency fund should be based on your monthly expenses.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/net-worth-calculator.html" class="tool-card">
+      <a href="/net-worth-calculator.html" class="tool-card" data-category="personal">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
         <div class="tool-name">Net Worth Calculator</div>
         <div class="tool-desc">Calculate your total net worth by summing all assets and subtracting all liabilities.</div>
@@ -382,28 +396,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/inflation-calculator.html" class="tool-card">
+      <a href="/inflation-calculator.html" class="tool-card" data-category="personal">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><line x1="1" y1="6" x2="1" y2="18"/></svg></div>
         <div class="tool-name">Inflation Calculator</div>
         <div class="tool-desc">See how inflation erodes purchasing power and what today's money will be worth in the future.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/break-even-calculator.html" class="tool-card">
+      <a href="/break-even-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
         <div class="tool-name">Break-Even Calculator</div>
         <div class="tool-desc">Calculate how many units you need to sell to cover costs and start making a profit.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/cash-flow-calculator.html" class="tool-card">
+      <a href="/cash-flow-calculator.html" class="tool-card" data-category="personal">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></div>
         <div class="tool-name">Cash Flow Calculator</div>
         <div class="tool-desc">Analyze monthly income and expenses to understand your personal cash flow position.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/rule-of-72-calculator.html" class="tool-card">
+      <a href="/rule-of-72-calculator.html" class="tool-card" data-category="retirement">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
         <div class="tool-name">Rule of 72 Calculator</div>
         <div class="tool-desc">Estimate how long it takes for an investment to double using the classic Rule of 72.</div>
@@ -412,28 +426,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/tip-calculator.html" class="tool-card">
+      <a href="/tip-calculator.html" class="tool-card" data-category="personal">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
         <div class="tool-name">Tip Calculator</div>
         <div class="tool-desc">Calculate tip amount and split the bill evenly for any group size.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/sales-tax-calculator.html" class="tool-card">
+      <a href="/sales-tax-calculator.html" class="tool-card" data-category="tax">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
         <div class="tool-name">Sales Tax Calculator</div>
         <div class="tool-desc">Add or remove sales tax from any purchase price for any state tax rate.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/vat-calculator.html" class="tool-card">
+      <a href="/vat-calculator.html" class="tool-card" data-category="tax">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
         <div class="tool-name">VAT Calculator</div>
         <div class="tool-desc">Add or extract Value Added Tax from any price for any VAT rate worldwide.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/paycheck-calculator.html" class="tool-card">
+      <a href="/paycheck-calculator.html" class="tool-card" data-category="tax">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
         <div class="tool-name">Paycheck Calculator</div>
         <div class="tool-desc">Estimate take-home pay after federal tax, state tax, Social Security, and Medicare.</div>
@@ -442,28 +456,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/overtime-calculator.html" class="tool-card">
+      <a href="/overtime-calculator.html" class="tool-card" data-category="tax">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="tool-name">Overtime Calculator</div>
         <div class="tool-desc">Calculate overtime pay at 1.5x or 2x and see your total weekly earnings.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/salary-calculator.html" class="tool-card">
+      <a href="/salary-calculator.html" class="tool-card" data-category="tax">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
         <div class="tool-name">Salary to Hourly Calculator</div>
         <div class="tool-desc">Convert annual salary to hourly rate or hourly wage to annual salary instantly.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/cost-of-living-calculator.html" class="tool-card">
+      <a href="/cost-of-living-calculator.html" class="tool-card" data-category="personal">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <div class="tool-name">Cost of Living Calculator</div>
         <div class="tool-desc">Find what salary you need in a new city to maintain your current standard of living.</div>
         <span class="tool-link">Compare →</span>
       </a>
 
-      <a href="/home-affordability-calculator.html" class="tool-card">
+      <a href="/home-affordability-calculator.html" class="tool-card" data-category="mortgage">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><line x1="9" y1="22" x2="9" y2="12"/><line x1="15" y1="12" x2="15" y2="22"/></svg></div>
         <div class="tool-name">Home Affordability Calculator</div>
         <div class="tool-desc">Calculate how much house you can afford based on your income and debt-to-income ratio.</div>
@@ -472,28 +486,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/credit-card-payoff-calculator.html" class="tool-card">
+      <a href="/credit-card-payoff-calculator.html" class="tool-card" data-category="loans">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg></div>
         <div class="tool-name">Credit Card Payoff Calculator</div>
         <div class="tool-desc">See how long it takes to pay off credit card debt and how much interest you'll pay.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/interest-rate-calculator.html" class="tool-card">
+      <a href="/interest-rate-calculator.html" class="tool-card" data-category="loans">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
         <div class="tool-name">Interest Rate Calculator</div>
         <div class="tool-desc">Reverse-engineer any loan to find the implied interest rate from payment and term.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/simple-interest-calculator.html" class="tool-card">
+      <a href="/simple-interest-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
         <div class="tool-name">Simple Interest Calculator</div>
         <div class="tool-desc">Calculate simple interest earned or owed on any principal amount over time.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/apr-calculator.html" class="tool-card">
+      <a href="/apr-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
         <div class="tool-name">APR Calculator</div>
         <div class="tool-desc">Calculate the true Annual Percentage Rate of a loan including all fees and costs.</div>
@@ -502,28 +516,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/roi-calculator.html" class="tool-card">
+      <a href="/roi-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
         <div class="tool-name">ROI Calculator</div>
         <div class="tool-desc">Calculate Return on Investment including net profit, ROI %, and annualized returns.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/cagr-calculator.html" class="tool-card">
+      <a href="/cagr-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg></div>
         <div class="tool-name">CAGR Calculator</div>
         <div class="tool-desc">Calculate Compound Annual Growth Rate between any two values over any time period.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/present-value-calculator.html" class="tool-card">
+      <a href="/present-value-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 8 12 12 16"/><line x1="16" y1="12" x2="8" y2="12"/></svg></div>
         <div class="tool-name">Present Value Calculator</div>
         <div class="tool-desc">Calculate the present value of any future cash amount using a discount rate.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/future-value-calculator.html" class="tool-card">
+      <a href="/future-value-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
         <div class="tool-name">Future Value Calculator</div>
         <div class="tool-desc">Project any investment forward with compound interest at any compounding frequency.</div>
@@ -532,28 +546,28 @@
 
       <div class="ad-slot" style="grid-column:1/-1;margin:4px 0">Advertisement</div>
 
-      <a href="/npv-calculator.html" class="tool-card">
+      <a href="/npv-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
         <div class="tool-name">NPV Calculator</div>
         <div class="tool-desc">Calculate Net Present Value to determine if an investment creates or destroys value.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/irr-calculator.html" class="tool-card">
+      <a href="/irr-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
         <div class="tool-name">IRR Calculator</div>
         <div class="tool-desc">Calculate Internal Rate of Return to evaluate and compare investment opportunities.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/lease-calculator.html" class="tool-card">
+      <a href="/lease-calculator.html" class="tool-card" data-category="analysis">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
         <div class="tool-name">Lease Calculator</div>
         <div class="tool-desc">Calculate your monthly car lease payment based on cap cost, residual value, and money factor.</div>
         <span class="tool-link">Calculate →</span>
       </a>
 
-      <a href="/escrow-calculator.html" class="tool-card">
+      <a href="/escrow-calculator.html" class="tool-card" data-category="mortgage">>
         <div class="tool-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
         <div class="tool-name">Escrow Calculator</div>
         <div class="tool-desc">Calculate your monthly escrow payment for property taxes, insurance, and PMI.</div>
@@ -618,21 +632,30 @@
 </footer>
 
 <script>
-function filterCards(q) {
-  var term = q.toLowerCase().trim();
-  var cards = document.querySelectorAll('.tool-card');
-  var visible = 0;
-  cards.forEach(function(c) {
-    var text = (c.querySelector('.tool-name').textContent + ' ' + c.querySelector('.tool-desc').textContent).toLowerCase();
-    var show = !term || text.includes(term);
-    c.style.display = show ? '' : 'none';
-    if (show) visible++;
+var _cat='all';
+function filterCat(btn){
+  _cat=btn.dataset.cat;
+  document.querySelectorAll('.cat-tab').forEach(function(t){t.classList.toggle('active',t.dataset.cat===_cat);});
+  applyFilters();
+}
+function filterCards(q){applyFilters();}
+function applyFilters(){
+  var q=document.getElementById('calc-search').value.toLowerCase().trim();
+  var cards=document.querySelectorAll('.tool-card');
+  var visible=0;
+  cards.forEach(function(c){
+    var catOk=_cat==='all'||c.dataset.category===_cat;
+    var txt=(c.querySelector('.tool-name').textContent+' '+c.querySelector('.tool-desc').textContent).toLowerCase();
+    var txtOk=!q||txt.includes(q);
+    var show=catOk&&txtOk;
+    c.style.display=show?'':'none';
+    if(show)visible++;
   });
-  document.querySelectorAll('.tool-grid .ad-slot').forEach(function(a) {
-    a.style.display = term ? 'none' : '';
-  });
-  document.getElementById('no-results').style.display = (term && visible === 0) ? 'block' : 'none';
+  var filtering=q||_cat!=='all';
+  document.querySelectorAll('.tool-grid .ad-slot').forEach(function(a){a.style.display=filtering?'none':''});
+  document.getElementById('no-results').style.display=(visible===0)?'block':'none';
 }
 </script>
+
 </body>
 </html>
