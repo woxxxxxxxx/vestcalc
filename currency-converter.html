@@ -58,6 +58,9 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:560px){.converter{flex-direction:column}.swap-btn{transform:rotate(90deg)}}
+.sidebar-sticky{position:fixed;right:20px;top:50%;transform:translateY(-50%);width:300px;z-index:50;display:none}
+.sidebar-ad{width:300px;height:600px;background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text3);font-size:13px;gap:4px;box-shadow:var(--shadow)}
+@media(min-width:1400px){.sidebar-sticky{display:block}}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}}
 </style>
 </head>
@@ -97,6 +100,8 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
       </div>
     </div>
     <div class="rate-info" id="rate-info">Select currencies to see the exchange rate.</div>
+
+    <div class="ad-slot" style="margin:20px 0;min-height:100px">Advertisement</div>
 
     <h3 style="font-size:14px;font-weight:700;color:var(--text2);margin-top:24px;margin-bottom:12px">1 USD equals</h3>
     <div class="rates-grid" id="rates-grid"></div>
@@ -164,5 +169,8 @@ function swapCurrencies(){
 populateSelects();
 convert();
 </script>
+<div class="sidebar-sticky">
+  <div class="sidebar-ad">Advertisement<br><small style="font-size:11px;opacity:.5">300&#215;600</small></div>
+</div>
 </body>
 </html>

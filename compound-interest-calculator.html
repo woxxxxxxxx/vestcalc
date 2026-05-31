@@ -65,6 +65,9 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a{color:#94a3b8;text-decoration:none;font-size:13px;transition:color .15s}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
+.sidebar-sticky{position:fixed;right:20px;top:50%;transform:translateY(-50%);width:300px;z-index:50;display:none}
+.sidebar-ad{width:300px;height:600px;background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text3);font-size:13px;gap:4px;box-shadow:var(--shadow)}
+@media(min-width:1400px){.sidebar-sticky{display:block}}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:400px){.result-grid{grid-template-columns:1fr}}
 </style>
@@ -119,6 +122,8 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
         <div class="input-wrap"><span class="input-prefix">$</span><input type="number" id="contrib" value="200" min="0" oninput="calc()"></div>
       </div>
     </div>
+
+    <div class="ad-slot" style="margin:20px 0;min-height:100px">Advertisement</div>
 
     <div class="result-grid">
       <div class="result-box highlight">
@@ -186,5 +191,8 @@ function calc(){
 }
 calc();
 </script>
+<div class="sidebar-sticky">
+  <div class="sidebar-ad">Advertisement<br><small style="font-size:11px;opacity:.5">300&#215;600</small></div>
+</div>
 </body>
 </html>
