@@ -1,24 +1,24 @@
-Create 20 more calculator HTML pages in C:\Users\Administrator\vestcalc\, same style (green #0d9488, GA G-EDVND7BVGL, AdSense ca-pub-1638874323475457):
+Create 20 more calculator HTML pages in C:\Users\Administrator\vestcalc\ with same green theme #0d9488, GA G-EDVND7BVGL, AdSense ca-pub-1638874323475457, back-to-top button, FAQ section, Related Tools section, full SEO:
 
-1. tip-calculator.html - Tip Calculator
-2. sales-tax-calculator.html - Sales Tax Calculator
-3. vat-calculator.html - VAT Calculator
-4. paycheck-calculator.html - Paycheck Calculator
-5. overtime-calculator.html - Overtime Calculator
-6. salary-calculator.html - Salary to Hourly Calculator
-7. cost-of-living-calculator.html - Cost of Living Calculator
-8. home-affordability-calculator.html - Home Affordability Calculator
-9. credit-card-payoff-calculator.html - Credit Card Payoff Calculator
-10. interest-rate-calculator.html - Interest Rate Calculator
-11. simple-interest-calculator.html - Simple Interest Calculator
-12. apr-calculator.html - APR Calculator
-13. roi-calculator.html - ROI Calculator
-14. cagr-calculator.html - CAGR Calculator
-15. present-value-calculator.html - Present Value Calculator
-16. future-value-calculator.html - Future Value Calculator
-17. npv-calculator.html - NPV Calculator
-18. irr-calculator.html - IRR Calculator
-19. lease-calculator.html - Lease Calculator
-20. escrow-calculator.html - Escrow Calculator
+1. electricity-bill-calculator.html - Electricity Bill Calculator
+2. solar-panel-calculator.html - Solar Panel Savings Calculator
+3. carbon-footprint-calculator.html - Carbon Footprint Calculator
+4. fuel-cost-calculator.html - Fuel Cost Calculator
+5. mpg-calculator.html - Miles Per Gallon Calculator
+6. road-trip-calculator.html - Road Trip Cost Calculator
+7. moving-cost-calculator.html - Moving Cost Estimator
+8. home-renovation-calculator.html - Home Renovation Cost Calculator
+9. paint-calculator.html - Paint Coverage Calculator
+10. flooring-calculator.html - Flooring Material Calculator
+11. concrete-calculator.html - Concrete Volume Calculator
+12. fence-calculator.html - Fence Material Calculator
+13. mulch-calculator.html - Mulch Coverage Calculator
+14. pool-volume-calculator.html - Swimming Pool Volume Calculator
+15. lawn-care-calculator.html - Lawn Care Cost Calculator
+16. wedding-budget-calculator.html - Wedding Budget Calculator
+17. college-cost-calculator.html - College Cost Calculator
+18. childcare-cost-calculator.html - Childcare Cost Calculator
+19. pet-cost-calculator.html - Pet Ownership Cost Calculator
+20. vacation-budget-calculator.html - Vacation Budget Calculator
 
-Update index.html to add all 20 to the grid. Then push: git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
+Update index.html to add all 20. Update sitemap.xml. Then push: git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
