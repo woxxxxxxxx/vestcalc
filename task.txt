@@ -1,24 +1,18 @@
-Create 20 more calculator HTML pages in C:\Users\Administrator\vestcalc\ with same green theme #0d9488, GA G-EDVND7BVGL, AdSense ca-pub-1638874323475457, back-to-top button, FAQ section, Related Tools section, full SEO:
+Optimize vestcalc.com with the following improvements:
 
-1. gpa-calculator.html - GPA Calculator
-2. grade-calculator.html - Grade Calculator
-3. test-score-calculator.html - Test Score Calculator
-4. credit-hours-calculator.html - College Credit Hours Calculator
-5. cgpa-calculator.html - CGPA Calculator
-6. final-grade-calculator.html - Final Grade Calculator
-7. weighted-average-calculator.html - Weighted Average Calculator
-8. statistics-calculator.html - Statistics Calculator (mean, median, mode, std dev)
-9. probability-calculator.html - Probability Calculator
-10. fraction-calculator.html - Fraction Calculator
-11. prime-number-checker.html - Prime Number Checker
-12. lcm-hcf-calculator.html - LCM and HCF Calculator
-13. square-root-calculator.html - Square Root Calculator
-14. exponent-calculator.html - Exponent Calculator
-15. logarithm-calculator.html - Logarithm Calculator
-16. quadratic-equation-solver.html - Quadratic Equation Solver
-17. matrix-calculator.html - Matrix Calculator (2x2, 3x3)
-18. unit-conversion-calculator.html - Unit Conversion Calculator
-19. speed-calculator.html - Speed Distance Time Calculator
-20. density-calculator.html - Density Calculator
+1. Update category filter tabs in index.html to include all current categories: All, Loans & Mortgage, Investment & Retirement, Tax & Income, Debt & Budgeting, Finance Analysis, Health, Education, Math & Science, Home & Energy, Budget & Life. Make sure all 101 calculators are correctly tagged with their category.
 
-Update index.html to add all 20. Update sitemap.xml. Then push: git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
+2. Add pagination to index.html - show 24 tools per page with Previous/Next buttons, or alternatively add "Load More" button. Keep search and category filter working with pagination.
+
+3. Create robots.txt in vestcalc root:
+User-agent: *
+Allow: /
+Sitemap: https://vestcalc.com/sitemap.xml
+
+4. Add breadcrumb navigation to all calculator pages (Home > Category > Tool Name), styled in green theme.
+
+5. Update privacy.html to include AdSense-specific privacy policy sections mentioning Google AdSense, cookies, and third-party advertising.
+
+6. Improve 404 handling - create a proper 404.html page with links back to homepage and popular calculators.
+
+Then push: git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master
