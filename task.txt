@@ -1,24 +1,24 @@
 Create 20 more calculator HTML pages in C:\Users\Administrator\vestcalc\ with same green theme #0d9488, GA G-EDVND7BVGL, AdSense ca-pub-1638874323475457, back-to-top button, FAQ section, Related Tools section, full SEO:
 
-1. electricity-bill-calculator.html - Electricity Bill Calculator
-2. solar-panel-calculator.html - Solar Panel Savings Calculator
-3. carbon-footprint-calculator.html - Carbon Footprint Calculator
-4. fuel-cost-calculator.html - Fuel Cost Calculator
-5. mpg-calculator.html - Miles Per Gallon Calculator
-6. road-trip-calculator.html - Road Trip Cost Calculator
-7. moving-cost-calculator.html - Moving Cost Estimator
-8. home-renovation-calculator.html - Home Renovation Cost Calculator
-9. paint-calculator.html - Paint Coverage Calculator
-10. flooring-calculator.html - Flooring Material Calculator
-11. concrete-calculator.html - Concrete Volume Calculator
-12. fence-calculator.html - Fence Material Calculator
-13. mulch-calculator.html - Mulch Coverage Calculator
-14. pool-volume-calculator.html - Swimming Pool Volume Calculator
-15. lawn-care-calculator.html - Lawn Care Cost Calculator
-16. wedding-budget-calculator.html - Wedding Budget Calculator
-17. college-cost-calculator.html - College Cost Calculator
-18. childcare-cost-calculator.html - Childcare Cost Calculator
-19. pet-cost-calculator.html - Pet Ownership Cost Calculator
-20. vacation-budget-calculator.html - Vacation Budget Calculator
+1. gpa-calculator.html - GPA Calculator
+2. grade-calculator.html - Grade Calculator
+3. test-score-calculator.html - Test Score Calculator
+4. credit-hours-calculator.html - College Credit Hours Calculator
+5. cgpa-calculator.html - CGPA Calculator
+6. final-grade-calculator.html - Final Grade Calculator
+7. weighted-average-calculator.html - Weighted Average Calculator
+8. statistics-calculator.html - Statistics Calculator (mean, median, mode, std dev)
+9. probability-calculator.html - Probability Calculator
+10. fraction-calculator.html - Fraction Calculator
+11. prime-number-checker.html - Prime Number Checker
+12. lcm-hcf-calculator.html - LCM and HCF Calculator
+13. square-root-calculator.html - Square Root Calculator
+14. exponent-calculator.html - Exponent Calculator
+15. logarithm-calculator.html - Logarithm Calculator
+16. quadratic-equation-solver.html - Quadratic Equation Solver
+17. matrix-calculator.html - Matrix Calculator (2x2, 3x3)
+18. unit-conversion-calculator.html - Unit Conversion Calculator
+19. speed-calculator.html - Speed Distance Time Calculator
+20. density-calculator.html - Density Calculator
 
 Update index.html to add all 20. Update sitemap.xml. Then push: git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master

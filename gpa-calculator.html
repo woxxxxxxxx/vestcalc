@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1638874323475457" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<title>GPA Calculator | VestCalc</title>
+<meta name="description" content="Calculate your GPA from letter grades or percentage scores. Add courses with credit hours to get your weighted GPA and cumulative GPA instantly.">
+<meta name="keywords" content="GPA calculator, grade point average calculator, cumulative GPA, weighted GPA, college GPA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VestCalc">
+<meta property="og:title" content="GPA Calculator | VestCalc">
+<meta property="og:description" content="Calculate your GPA from letter grades or percentage scores. Add courses with credit hours to get your weighted GPA and cumulative GPA instantly.">
+<meta property="og:url" content="https://vestcalc.com/gpa-calculator.html">
+<meta property="og:image" content="https://vestcalc.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GPA Calculator | VestCalc">
+<meta name="twitter:description" content="Calculate your GPA from letter grades or percentage scores. Add courses with credit hours to get your weighted GPA and cumulative GPA instantly.">
+<link rel="canonical" href="https://vestcalc.com/gpa-calculator.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"GPA Calculator","url":"https://vestcalc.com/gpa-calculator.html","description":"Calculate your GPA from letter grades or percentage scores. Add courses with credit hours to get your weighted GPA and cumulative GPA instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"VestCalc","url":"https://vestcalc.com"}}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDVND7BVGL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EDVND7BVGL');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#0d9488;--primary-dark:#0f766e;--primary-light:#ccfbf1;--primary-dim:rgba(13,148,136,.1);--bg:#f8fafc;--bg2:#ffffff;--text:#0f172a;--text2:#475569;--text3:#94a3b8;--border:#e2e8f0;--radius:12px;--radius-sm:8px;--shadow:0 1px 3px rgba(0,0,0,.08)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{background:var(--bg2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:32px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:20px;height:20px;fill:#fff}
+.logo-name{font-size:22px;font-weight:800;color:var(--text);letter-spacing:-.5px}
+.logo-name span{color:var(--primary)}
+nav{display:flex;align-items:center;gap:4px;flex:1}
+nav a{padding:6px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:var(--text2);text-decoration:none;transition:all .15s}
+nav a:hover{color:var(--primary);background:var(--primary-dim)}
+.nav-cta{margin-left:auto;padding:8px 18px;background:var(--primary);color:#fff!important;border-radius:var(--radius-sm);font-size:14px;font-weight:600;text-decoration:none;transition:background .15s}
+.nav-cta:hover{background:var(--primary-dark)!important}
+.page-hero{background:linear-gradient(135deg,#0f766e 0%,#0d9488 50%,#14b8a6 100%);color:#fff;padding:48px 20px;text-align:center}
+.page-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin-bottom:8px}
+.page-hero p{font-size:15px;opacity:.9;max-width:500px;margin:0 auto}
+main{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+.ad-slot{background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:var(--text3);font-size:13px;margin:28px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+.calc-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:20px}
+.calc-card h2{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:13px;font-weight:600;color:var(--text2)}
+input,select,textarea{padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:15px;color:var(--text);background:var(--bg);outline:none;transition:border .15s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+textarea{resize:vertical;min-height:80px;font-family:inherit}
+.btn{width:100%;padding:13px;background:var(--primary);color:#fff;border:none;border-radius:var(--radius-sm);font-size:15px;font-weight:700;cursor:pointer;transition:background .15s;margin-top:4px}
+.btn:hover{background:var(--primary-dark)}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:20px}
+.result-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;text-align:center}
+.result-box.primary{background:var(--primary-dim);border-color:var(--primary-light)}
+.result-label{font-size:12px;color:var(--text3);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.result-value{font-size:1.5rem;font-weight:800;color:var(--primary)}
+.result-box:not(.primary) .result-value{color:var(--text);font-size:1.25rem}
+.info-box{background:var(--primary-dim);border:1px solid var(--primary-light);border-radius:var(--radius-sm);padding:14px 18px;margin-top:16px;font-size:14px;color:var(--primary-dark)}
+.sidebar-sticky{position:fixed;right:20px;top:50%;transform:translateY(-50%);width:300px;z-index:50;display:none}
+.sidebar-ad{background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);padding:20px;text-align:center;color:var(--text3);font-size:13px;height:600px;display:flex;align-items:center;justify-content:center;flex-direction:column}
+@media(min-width:1400px){.sidebar-sticky{display:block}}
+footer{background:var(--text);color:#94a3b8;padding:40px 20px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.footer-logo{font-size:18px;font-weight:800;color:#fff}
+.footer-logo span{color:var(--primary)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:#94a3b8;text-decoration:none;font-size:13px;transition:color .15s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:13px;width:100%}
+@media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
+#btt{position:fixed;bottom:28px;right:28px;width:46px;height:46px;background:var(--primary);color:#fff;border:none;border-radius:50%;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,background .15s;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;padding:0}
+#btt.show{opacity:1;visibility:visible}
+#btt:hover{background:var(--primary-dark)}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2" fill="none" stroke="#fff" stroke-width="2"/><rect x="7" y="5" width="10" height="4" rx="1" fill="none" stroke="#fff" stroke-width="1.5"/><polyline points="8 7.5 10 6 13 7 16 5" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="14" r="1" fill="#fff"/><circle cx="12" cy="14" r="1" fill="#fff"/><circle cx="15.5" cy="14" r="1" fill="#fff"/><circle cx="8.5" cy="18" r="1" fill="#fff"/><circle cx="12" cy="18" r="1" fill="#fff"/><circle cx="15.5" cy="18" r="1" fill="#fff"/></svg></div><span class="logo-name">Vest<span>Calc</span></span></a>
+    <nav><a href="/">Home</a><a href="/#calculators">Calculators</a><a href="/" class="nav-cta">All Tools</a></nav>
+  </div>
+</header>
+<div class="page-hero"><h1>GPA Calculator</h1><p>Calculate your grade point average from letter grades and credit hours.</p></div>
+<main>
+  <div class="ad-slot">Advertisement</div>
+  <div class="calc-card">
+    <h2>Enter Your Details</h2>
+    <div style="margin-bottom:12px;font-size:13px;color:var(--text2)">Enter each course below. Leave a row blank to skip it.</div>
+<div id="gpa-rows"></div>
+<button type="button" class="btn" style="margin-bottom:12px;background:var(--bg);color:var(--primary);border:1px solid var(--primary)" onclick="addRow()">+ Add Course</button>
+    <button class="btn" onclick="calc()">Calculate</button>
+  </div>
+  <div class="ad-slot">Advertisement</div>
+  <div class="calc-card" id="results" style="display:none">
+    <h2>Results</h2>
+    <div class="result-grid"><div class="result-box primary"><div class="result-label">GPA</div><div class="result-value" id="r-gpa">—</div></div><div class="result-box"><div class="result-label">Total Credits</div><div class="result-value" id="r-cred">—</div></div><div class="result-box"><div class="result-label">Grade Points</div><div class="result-value" id="r-pts">—</div></div></div>
+    
+  </div>
+  <div class="ad-slot">Advertisement</div>
+  <div class="calc-card" style="margin-top:0"><h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2><div class="faq-item"><div class="faq-q">How is GPA calculated?</div><div class="faq-a">GPA = total grade points ÷ total credit hours. Each letter grade maps to points (A=4.0, B=3.0, C=2.0, D=1.0, F=0). Weighted GPA accounts for credit hours — a 4-credit course impacts your GPA more than a 1-credit course.</div></div><div class="faq-item"><div class="faq-q">What is a good GPA?</div><div class="faq-a">Most employers and graduate schools consider 3.0–3.5 (B to B+) a solid GPA. Competitive graduate programs often expect 3.5+. Honors distinctions: Cum Laude (~3.5), Magna Cum Laude (~3.7), Summa Cum Laude (~3.9) vary by institution.</div></div><div class="faq-item"><div class="faq-q">What's the difference between GPA and CGPA?</div><div class="faq-a">GPA refers to your grade point average for a specific semester or period. CGPA (Cumulative GPA) is your overall GPA across all completed semesters. Most transcripts show both to give a complete picture of academic performance.</div></div><div class="faq-item"><div class="faq-q">Can I raise a low GPA?</div><div class="faq-a">Yes. Retake failed or low-grade courses if your school allows grade replacement. Focus on high-credit courses since they move the needle more. Consistent strong performance each semester gradually raises cumulative GPA over time.</div></div></div>
+  <div class="calc-card" style="margin-top:0"><h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2><div class="related-grid"><a href="/grade-calculator.html" class="related-card"><div class="related-card-title">Grade Calculator</div><div class="related-card-desc">Find the grade you need</div></a><a href="/final-grade-calculator.html" class="related-card"><div class="related-card-title">Final Grade Calculator</div><div class="related-card-desc">What score to pass</div></a><a href="/weighted-average-calculator.html" class="related-card"><div class="related-card-title">Weighted Average</div><div class="related-card-desc">Average with weights</div></a><a href="/cgpa-calculator.html" class="related-card"><div class="related-card-title">CGPA Calculator</div><div class="related-card-desc">Cumulative GPA tracker</div></a></div></div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Vest<span>Calc</span></div>
+    <div class="footer-links"><a href="/about.html">About</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/contact.html">Contact</a></div>
+    <p class="footer-copy">&copy; 2026 VestCalc. All rights reserved.</p>
+  </div>
+</footer>
+<div class="sidebar-sticky"><div class="sidebar-ad">Advertisement<br><small>300&times;600</small></div></div>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+<script>
+function fmt(n,d){d=d==null?2:d;return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function fmtN(n,d){d=d==null?0:d;return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function sv(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+function svh(id,v){var e=document.getElementById(id);if(e)e.innerHTML=v;}
+function showR(){document.getElementById('results').style.display='';}
+function gv(id){return parseFloat(document.getElementById(id).value)||0;}
+function gs(id){var e=document.getElementById(id);return e?e.value:'';}
+window.addEventListener('scroll',function(){document.getElementById('btt').classList.toggle('show',window.scrollY>300);});
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
+var gradeMap={'A+':4.0,'A':4.0,'A-':3.7,'B+':3.3,'B':3.0,'B-':2.7,'C+':2.3,'C':2.0,'C-':1.7,'D+':1.3,'D':1.0,'D-':0.7,'F':0.0};
+var rowCount=0;
+function addRow(){
+  rowCount++;
+  var r=rowCount;
+  var div=document.createElement('div');
+  div.className='form-grid';div.id='row'+r;div.style.marginBottom='10px';
+  div.innerHTML='<div class="form-group"><label>Course Name</label><input type="text" id="cn'+r+'" placeholder="e.g. Math 101"></div>'
+    +'<div class="form-group"><label>Grade</label><select id="gr'+r+'"><option value="">Select</option>'
+    +'<option>A+</option><option>A</option><option>A-</option><option>B+</option><option>B</option><option>B-</option>'
+    +'<option>C+</option><option>C</option><option>C-</option><option>D+</option><option>D</option><option>D-</option><option>F</option></select></div>'
+    +'<div class="form-group"><label>Credit Hours</label><input type="number" id="cr'+r+'" placeholder="3" min="0" step="0.5"></div>'
+    +'<div class="form-group" style="justify-content:flex-end;align-items:flex-end"><button type="button" onclick="document.getElementById('row'+r+'').remove()" style="padding:10px 16px;background:none;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;color:var(--text2)">Remove</button></div>';
+  document.getElementById('gpa-rows').appendChild(div);
+}
+addRow();addRow();addRow();
+function calc(){
+  var pts=0,cred=0;
+  for(var i=1;i<=rowCount;i++){
+    var gr=gs('gr'+i),cr=parseFloat((document.getElementById('cr'+i)||{}).value)||0;
+    if(!gr||!cr)continue;
+    var gp=gradeMap[gr];if(gp==null)continue;
+    pts+=gp*cr;cred+=cr;
+  }
+  if(cred===0)return;
+  var gpa=pts/cred;
+  sv('r-gpa',gpa.toFixed(3));sv('r-cred',cred.toFixed(1));sv('r-pts',pts.toFixed(2));
+  showR();
+}
+</script>
+</body>
+</html>
