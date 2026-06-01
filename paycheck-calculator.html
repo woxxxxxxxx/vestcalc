@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -143,6 +156,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is the difference between gross pay and net pay?</div><div class="faq-a">Gross pay is total earnings before any deductions. Net pay (take-home) is what you receive after federal and state income taxes, Social Security, Medicare, health insurance premiums, and 401(k) contributions are deducted.</div></div>
+  <div class="faq-item"><div class="faq-q">What is FICA tax?</div><div class="faq-a">FICA (Federal Insurance Contributions Act) funds Social Security and Medicare. Employees pay 6.2% for Social Security (on wages up to $168,600 in 2025) and 1.45% for Medicare — a combined 7.65%. Employers match these amounts.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I change my federal withholding?</div><div class="faq-a">Complete a new Form W-4 and submit it to your employer. More allowances reduce withholding (larger paychecks, possible tax bill at filing). Fewer allowances increase withholding (smaller paychecks, likely a larger refund).</div></div>
+  <div class="faq-item"><div class="faq-q">Why does my paycheck change when I get a raise?</div><div class="faq-a">A raise may push more income into a higher marginal tax bracket, increasing withholding on the additional income. Pre-tax benefits like 401(k) contributions also recalculate when your pay changes.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/salary-calculator.html" class="related-card"><div class="related-card-title">Salary Calculator</div><div class="related-card-desc">Annual to hourly pay breakdown</div></a>
+    <a href="/overtime-calculator.html" class="related-card"><div class="related-card-title">Overtime Calculator</div><div class="related-card-desc">Calculate overtime earnings</div></a>
+    <a href="/tax-calculator.html" class="related-card"><div class="related-card-title">Tax Calculator</div><div class="related-card-desc">Estimate your total tax bill</div></a>
+    <a href="/budget-calculator.html" class="related-card"><div class="related-card-title">Budget Calculator</div><div class="related-card-desc">Plan spending from net pay</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -186,6 +217,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -138,6 +151,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is the break-even point?</div><div class="faq-a">The break-even point is when total revenue equals total costs — neither profit nor loss. Above break-even, every additional unit sold generates pure profit at the contribution margin rate. It is critical for pricing and business viability analysis.</div></div>
+  <div class="faq-item"><div class="faq-q">How is the break-even point calculated?</div><div class="faq-a">Break-even units = Fixed Costs ÷ (Selling Price − Variable Cost per Unit). Example: $50,000 fixed costs ÷ ($100 selling price − $60 variable cost) = 1,250 units to break even. The denominator is your contribution margin per unit.</div></div>
+  <div class="faq-item"><div class="faq-q">What is contribution margin?</div><div class="faq-a">Contribution margin = Selling Price − Variable Costs per unit. It shows how much each unit sold contributes toward covering fixed costs and generating profit. High contribution margins mean you break even faster.</div></div>
+  <div class="faq-item"><div class="faq-q">How can I lower my break-even point?</div><div class="faq-a">Reduce fixed costs (rent, salaries, subscriptions), decrease variable costs (better supplier deals, production efficiency), or raise prices if the market allows. Increasing volume alone does not lower break-even but grows profit past it.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/roi-calculator.html" class="related-card"><div class="related-card-title">ROI Calculator</div><div class="related-card-desc">Return on investment analysis</div></a>
+    <a href="/cash-flow-calculator.html" class="related-card"><div class="related-card-title">Cash Flow Calculator</div><div class="related-card-desc">Analyze business cash flows</div></a>
+    <a href="/npv-calculator.html" class="related-card"><div class="related-card-title">NPV Calculator</div><div class="related-card-desc">Net present value of ventures</div></a>
+    <a href="/budget-calculator.html" class="related-card"><div class="related-card-title">Budget Calculator</div><div class="related-card-desc">Plan business and personal budgets</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -173,6 +204,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

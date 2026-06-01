@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -145,6 +158,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is net worth?</div><div class="faq-a">Net worth = total assets − total liabilities. Assets include cash, investments, real estate, and property. Liabilities include mortgage, car loans, credit cards, and student loans. Positive net worth means you own more than you owe.</div></div>
+  <div class="faq-item"><div class="faq-q">What is a good net worth by age?</div><div class="faq-a">Fidelity suggests: 1× your salary saved by 30, 3× by 40, 6× by 50, 8× by 60. The median U.S. net worth is around $87,000 (Federal Reserve 2022), a realistic benchmark for most households.</div></div>
+  <div class="faq-item"><div class="faq-q">What assets should I include?</div><div class="faq-a">Include checking and savings accounts, retirement accounts (401k, IRA), brokerage accounts, real estate equity, vehicles, and business ownership stakes. Exclude depreciating consumer goods unless they have significant resale value.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I increase my net worth?</div><div class="faq-a">Increase assets by saving and investing consistently. Reduce liabilities by paying off high-interest debt aggressively. Avoid lifestyle inflation as income rises. Increasing income while keeping expenses stable is the most effective lever.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/budget-calculator.html" class="related-card"><div class="related-card-title">Budget Calculator</div><div class="related-card-desc">Manage spending to build wealth</div></a>
+    <a href="/retirement-calculator.html" class="related-card"><div class="related-card-title">Retirement Calculator</div><div class="related-card-desc">Plan for long-term net worth</div></a>
+    <a href="/investment-return-calculator.html" class="related-card"><div class="related-card-title">Investment Return</div><div class="related-card-desc">Grow your asset base</div></a>
+    <a href="/debt-payoff-calculator.html" class="related-card"><div class="related-card-title">Debt Payoff Calculator</div><div class="related-card-desc">Reduce your liabilities</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -186,6 +217,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

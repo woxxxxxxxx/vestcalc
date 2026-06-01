@@ -85,6 +85,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .sidebar-ad{width:300px;height:600px;background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text3);font-size:13px;gap:4px;box-shadow:var(--shadow)}
 @media(min-width:1400px){.sidebar-sticky{display:block}}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.pct-row{gap:8px}.pct-row input{width:80px}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -166,6 +179,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
   </div>
 
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">How do I calculate what percentage one number is of another?</div><div class="faq-a">Divide the part by the whole, then multiply by 100. For example, 30 as a percentage of 120: 30 ÷ 120 = 0.25 × 100 = 25%. So 30 is 25% of 120.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I calculate a percentage increase or decrease?</div><div class="faq-a">Percentage change = ((New − Old) / Old) × 100. A positive result is an increase; negative is a decrease. From $80 to $100: (($100 − $80) / $80) × 100 = 25% increase.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I find the original number from a percentage?</div><div class="faq-a">Divide the known value by the percentage as a decimal. If $60 represents 75% of a total: $60 ÷ 0.75 = $80. The original value is $80.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the percentage difference between two numbers?</div><div class="faq-a">Percentage difference = |V1 − V2| / ((V1 + V2) / 2) × 100. Used when neither value is the reference base, such as when comparing two independent values with no clear starting point.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/tip-calculator.html" class="related-card"><div class="related-card-title">Tip Calculator</div><div class="related-card-desc">Calculate tips and split bills</div></a>
+    <a href="/sales-tax-calculator.html" class="related-card"><div class="related-card-title">Sales Tax Calculator</div><div class="related-card-desc">Add or remove sales tax</div></a>
+    <a href="/vat-calculator.html" class="related-card"><div class="related-card-title">VAT Calculator</div><div class="related-card-desc">Add or extract VAT amounts</div></a>
+    <a href="/roi-calculator.html" class="related-card"><div class="related-card-title">ROI Calculator</div><div class="related-card-desc">Calculate return on investment</div></a>
+  </div>
+</div>
 </main>
 
 <footer>
@@ -183,6 +214,8 @@ function c2(){var x=parseFloat(document.getElementById('b1').value)||0,y=parseFl
 function c3(){var x=parseFloat(document.getElementById('c1').value)||0,y=parseFloat(document.getElementById('c2').value)||0;var ch=x?((y-x)/Math.abs(x)*100):0;document.getElementById('c3r').textContent=(ch>=0?'+':'')+fmtN(ch)+'%';}
 function c4(){var y=parseFloat(document.getElementById('d2').value)||0,p=parseFloat(document.getElementById('d1').value)||0;document.getElementById('d3i').textContent=fmtN(y*(1+p/100));}
 function c4b(){var y=parseFloat(document.getElementById('d2b').value)||0,p=parseFloat(document.getElementById('d1b').value)||0;document.getElementById('d3d').textContent=fmtN(y*(1-p/100));}
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 <div class="sidebar-sticky">
   <div class="sidebar-ad">Advertisement<br><small style="font-size:11px;opacity:.5">300&#215;600</small></div>

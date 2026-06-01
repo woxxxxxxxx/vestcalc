@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -138,6 +151,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is inflation?</div><div class="faq-a">Inflation is the rate at which the general price level of goods and services rises over time, reducing purchasing power. At 3% inflation, something costing $100 today will cost $103 next year. Central banks generally target around 2% annual inflation.</div></div>
+  <div class="faq-item"><div class="faq-q">How is inflation measured?</div><div class="faq-a">The most common measure is the Consumer Price Index (CPI), which tracks price changes in a basket of goods and services including food, housing, transportation, and medical care. The Fed uses the PCE (Personal Consumption Expenditures) index.</div></div>
+  <div class="faq-item"><div class="faq-q">How does inflation affect investments?</div><div class="faq-a">Inflation erodes the real value of fixed-income investments like bonds and savings accounts. Stocks, real estate, and TIPS (Treasury Inflation-Protected Securities) tend to outpace inflation over long periods.</div></div>
+  <div class="faq-item"><div class="faq-q">What was the highest U.S. inflation rate?</div><div class="faq-a">U.S. inflation peaked at over 20% during World War I and exceeded 10% in the early 1980s. More recently, post-COVID inflation peaked at around 9.1% in June 2022, the highest in 40 years, before declining back toward the Fed's 2% target.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="related-card-title">Compound Interest</div><div class="related-card-desc">Outpace inflation with investing</div></a>
+    <a href="/future-value-calculator.html" class="related-card"><div class="related-card-title">Future Value Calculator</div><div class="related-card-desc">Project real vs. nominal value</div></a>
+    <a href="/present-value-calculator.html" class="related-card"><div class="related-card-title">Present Value Calculator</div><div class="related-card-desc">Discount cash flows for inflation</div></a>
+    <a href="/cost-of-living-calculator.html" class="related-card"><div class="related-card-title">Cost of Living</div><div class="related-card-desc">Compare city living costs</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -173,6 +204,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

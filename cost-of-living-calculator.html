@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -138,6 +151,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 <div class="info-box">Tip: Use 100 for an average U.S. city. NYC ≈ 187, San Francisco ≈ 195, Austin ≈ 118, Charlotte ≈ 96.</div>
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is cost of living?</div><div class="faq-a">Cost of living measures how much it costs to maintain a standard of living in a given location — covering housing, food, healthcare, transportation, and utilities. Cities like San Francisco and NYC rank among the most expensive in the U.S.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I compare salaries across cities?</div><div class="faq-a">Use cost of living indexes to adjust salaries. A $100,000 salary in New York City provides the same lifestyle as roughly $55,000–$65,000 in Kansas City. Divide the target city's index by your current city's index and multiply by salary.</div></div>
+  <div class="faq-item"><div class="faq-q">What factors drive cost of living differences?</div><div class="faq-a">Housing is the single biggest driver — varying by 5–10× between the most and least expensive U.S. cities. Other factors include taxes, healthcare, grocery prices, transportation infrastructure, and overall demand for the area.</div></div>
+  <div class="faq-item"><div class="faq-q">Does remote work affect cost of living decisions?</div><div class="faq-a">Significantly. Remote workers earning city salaries while living in lower-cost areas can dramatically increase real purchasing power. However, some employers adjust salaries based on the employee's location, so check company policy.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/salary-calculator.html" class="related-card"><div class="related-card-title">Salary Calculator</div><div class="related-card-desc">Break down your annual pay</div></a>
+    <a href="/budget-calculator.html" class="related-card"><div class="related-card-title">Budget Calculator</div><div class="related-card-desc">Plan a budget in any city</div></a>
+    <a href="/inflation-calculator.html" class="related-card"><div class="related-card-title">Inflation Calculator</div><div class="related-card-desc">See purchasing power over time</div></a>
+    <a href="/paycheck-calculator.html" class="related-card"><div class="related-card-title">Paycheck Calculator</div><div class="related-card-desc">Estimate take-home pay</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -173,6 +204,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

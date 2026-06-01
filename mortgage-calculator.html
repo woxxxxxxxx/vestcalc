@@ -106,6 +106,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .sidebar-ad{width:300px;height:600px;background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text3);font-size:13px;gap:4px;box-shadow:var(--shadow)}
 @media(min-width:1400px){.sidebar-sticky{display:block}}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -196,6 +209,25 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
   </div>
 
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is a mortgage?</div><div class="faq-a">A mortgage is a loan used to purchase real estate, where the property serves as collateral. You borrow from a lender and repay over a set term — typically 15 or 30 years — with monthly payments covering principal and interest.</div></div>
+  <div class="faq-item"><div class="faq-q">How much down payment do I need?</div><div class="faq-a">Conventional loans typically require 3–20% down. Putting 20% down avoids Private Mortgage Insurance (PMI). FHA loans allow as little as 3.5% down, while VA and USDA loans may require no down payment at all.</div></div>
+  <div class="faq-item"><div class="faq-q">What is PMI?</div><div class="faq-a">Private Mortgage Insurance (PMI) is required on conventional loans when your down payment is less than 20%. It protects the lender if you default. PMI typically costs 0.5–1.5% of the loan amount per year and can be removed once you reach 20% equity.</div></div>
+  <div class="faq-item"><div class="faq-q">What affects my mortgage interest rate?</div><div class="faq-a">Your credit score, loan-to-value ratio, loan term, property type, and market conditions all affect your rate. A higher credit score and larger down payment generally result in a lower interest rate.</div></div>
+  <div class="faq-item"><div class="faq-q">Should I choose a 15-year or 30-year mortgage?</div><div class="faq-a">A 15-year mortgage has higher monthly payments but much lower total interest. A 30-year mortgage offers lower payments with more flexibility. Choose 15-year if you can comfortably afford the payments; 30-year if you need cash flow room.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/amortization-calculator.html" class="related-card"><div class="related-card-title">Amortization Schedule</div><div class="related-card-desc">Month-by-month payment breakdown</div></a>
+    <a href="/home-affordability-calculator.html" class="related-card"><div class="related-card-title">Home Affordability</div><div class="related-card-desc">How much house can you afford?</div></a>
+    <a href="/down-payment-calculator.html" class="related-card"><div class="related-card-title">Down Payment Calculator</div><div class="related-card-desc">Plan your down payment savings</div></a>
+    <a href="/refinance-calculator.html" class="related-card"><div class="related-card-title">Refinance Calculator</div><div class="related-card-desc">Should you refinance?</div></a>
+  </div>
+</div>
 </main>
 
 <footer>
@@ -240,6 +272,8 @@ function calc(){
   }
 }
 calc();
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 <div class="sidebar-sticky">
   <div class="sidebar-ad">Advertisement<br><small style="font-size:11px;opacity:.5">300&#215;600</small></div>

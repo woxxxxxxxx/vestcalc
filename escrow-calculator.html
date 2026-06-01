@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -141,6 +154,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 <div class="info-box" id="pmi-note"></div>
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is escrow in a mortgage?</div><div class="faq-a">Mortgage escrow is an account managed by your lender that holds funds for property taxes and homeowner's insurance. Each month, part of your payment goes into escrow, and the lender pays your tax and insurance bills when they come due.</div></div>
+  <div class="faq-item"><div class="faq-q">What is included in an escrow payment?</div><div class="faq-a">Escrow typically covers property taxes, homeowner's insurance, and sometimes flood insurance or PMI premiums. These are collected monthly (1/12 of annual amounts) and held until bills are due.</div></div>
+  <div class="faq-item"><div class="faq-q">Can I opt out of an escrow account?</div><div class="faq-a">Many lenders allow waiving escrow once you have 20%+ equity, though they may charge a fee. Managing your own taxes and insurance requires discipline — missed payments can lead to tax liens or insurance lapses.</div></div>
+  <div class="faq-item"><div class="faq-q">Why did my escrow payment change?</div><div class="faq-a">Escrow adjusts annually based on property tax assessments and insurance premium changes. If your taxes or insurance increased, your monthly escrow portion rises. Lenders conduct an annual analysis to reconcile any shortage or surplus.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/mortgage-calculator.html" class="related-card"><div class="related-card-title">Mortgage Calculator</div><div class="related-card-desc">Full mortgage payment estimate</div></a>
+    <a href="/amortization-calculator.html" class="related-card"><div class="related-card-title">Amortization Schedule</div><div class="related-card-desc">Payment breakdown over time</div></a>
+    <a href="/home-affordability-calculator.html" class="related-card"><div class="related-card-title">Home Affordability</div><div class="related-card-desc">How much home can you buy?</div></a>
+    <a href="/down-payment-calculator.html" class="related-card"><div class="related-card-title">Down Payment Calculator</div><div class="related-card-desc">Plan your down payment</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -181,6 +212,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -139,6 +152,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is future value?</div><div class="faq-a">Future value (FV) is how much a current sum of money will be worth at a specified future date, given a rate of return. It is the foundation of retirement planning, investment projection, and financial goal setting.</div></div>
+  <div class="faq-item"><div class="faq-q">How does compounding frequency affect future value?</div><div class="faq-a">More frequent compounding yields a slightly higher future value. $10,000 at 8% for 20 years: annual compounding = $46,610; monthly compounding = $49,268. Differences become more significant at higher rates and longer periods.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the time value of money?</div><div class="faq-a">The time value of money principle states that a dollar today is worth more than a dollar in the future, because today's dollar can be invested to earn returns. Future value calculations apply this principle to project what today's money will become.</div></div>
+  <div class="faq-item"><div class="faq-q">How does inflation affect future value?</div><div class="faq-a">Nominal future value shows raw growth without adjusting for inflation. At 3% inflation, money that grows to $50,000 nominally might only have $30,000 of today's purchasing power. Always consider real returns for long-term planning.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/present-value-calculator.html" class="related-card"><div class="related-card-title">Present Value Calculator</div><div class="related-card-desc">Reverse: discount to today's value</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="related-card-title">Compound Interest</div><div class="related-card-desc">Model compound growth</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="related-card-title">Savings Goal Calculator</div><div class="related-card-desc">Plan savings to hit a target</div></a>
+    <a href="/investment-return-calculator.html" class="related-card"><div class="related-card-title">Investment Return</div><div class="related-card-desc">Measure actual portfolio returns</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -180,6 +211,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

@@ -102,6 +102,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .sidebar-ad{width:300px;height:600px;background:var(--bg2);border:1px dashed var(--border);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text3);font-size:13px;gap:4px;box-shadow:var(--shadow)}
 @media(min-width:1400px){.sidebar-sticky{display:block}}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -170,6 +183,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
   </div>
 
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">How much should I save each month?</div><div class="faq-a">A common guideline is the 50/30/20 rule: 50% of after-tax income for needs, 30% for wants, and 20% for savings. For a specific goal, work backwards from the target amount, timeline, and expected interest rate.</div></div>
+  <div class="faq-item"><div class="faq-q">What is a high-yield savings account?</div><div class="faq-a">A high-yield savings account (HYSA) typically offers 10–20x the interest of a traditional savings account. They are FDIC-insured and available at many online banks, significantly reducing the time needed to reach a savings goal.</div></div>
+  <div class="faq-item"><div class="faq-q">Should I invest or save for my goal?</div><div class="faq-a">For goals under 3 years away, keep money in savings accounts or CDs for stability. For longer-term goals (3+ years), investing in index funds may generate higher returns, though with more short-term price risk.</div></div>
+  <div class="faq-item"><div class="faq-q">How does compound interest help me reach goals faster?</div><div class="faq-a">Compound interest earns returns on both your principal and accumulated interest. The longer your timeline, the more dramatic the compounding effect. Starting even a few years earlier can result in tens of thousands of dollars more.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="related-card-title">Compound Interest</div><div class="related-card-desc">See how savings compound over time</div></a>
+    <a href="/emergency-fund-calculator.html" class="related-card"><div class="related-card-title">Emergency Fund</div><div class="related-card-desc">Calculate your safety net size</div></a>
+    <a href="/future-value-calculator.html" class="related-card"><div class="related-card-title">Future Value Calculator</div><div class="related-card-desc">Project future investment value</div></a>
+    <a href="/budget-calculator.html" class="related-card"><div class="related-card-title">Budget Calculator</div><div class="related-card-desc">Allocate income to meet goals</div></a>
+  </div>
+</div>
 </main>
 
 <footer>
@@ -204,6 +235,8 @@ function calc(){
   document.getElementById('prog-label').textContent=pct.toFixed(1)+'% complete — $'+fmt(current)+' of $'+fmt(goal);
 }
 calc();
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 <div class="sidebar-sticky">
   <div class="sidebar-ad">Advertisement<br><small style="font-size:11px;opacity:.5">300&#215;600</small></div>

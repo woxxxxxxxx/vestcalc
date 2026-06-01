@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -138,6 +151,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is an interest rate?</div><div class="faq-a">An interest rate is the percentage of a loan principal charged by the lender as cost of borrowing, or paid by a bank to hold deposits. Expressed as an annual percentage, rates reflect risk, inflation expectations, and central bank policy.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the difference between interest rate and APR?</div><div class="faq-a">The interest rate is the basic cost of borrowing, excluding fees. APR includes fees, points, and other loan costs spread over the loan term. APR is always greater than or equal to the interest rate and gives a truer picture of total loan cost.</div></div>
+  <div class="faq-item"><div class="faq-q">What credit score do I need for a good interest rate?</div><div class="faq-a">Generally: 760+ = best rates; 720–759 = very good; 680–719 = good; 620–679 = fair. Even a 0.5% rate difference can mean thousands of dollars over the life of a mortgage or large loan.</div></div>
+  <div class="faq-item"><div class="faq-q">How does the Federal Reserve affect my interest rate?</div><div class="faq-a">The Fed sets the federal funds rate — the rate banks charge each other overnight. This flows through to prime rate and other benchmarks. When the Fed raises rates, mortgage and credit card rates typically rise; when they cut, rates fall.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/loan-calculator.html" class="related-card"><div class="related-card-title">Loan Calculator</div><div class="related-card-desc">Calculate loan payments</div></a>
+    <a href="/apr-calculator.html" class="related-card"><div class="related-card-title">APR Calculator</div><div class="related-card-desc">APR vs. interest rate analysis</div></a>
+    <a href="/amortization-calculator.html" class="related-card"><div class="related-card-title">Amortization Schedule</div><div class="related-card-desc">Payment breakdown by period</div></a>
+    <a href="/mortgage-calculator.html" class="related-card"><div class="related-card-title">Mortgage Calculator</div><div class="related-card-desc">Mortgage payment estimator</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -180,6 +211,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

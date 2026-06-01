@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -139,6 +152,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is APR?</div><div class="faq-a">Annual Percentage Rate (APR) represents the true yearly cost of a loan — interest rate plus fees (origination fees, points, mortgage insurance). APR is always greater than or equal to the interest rate and allows fair comparison between loans.</div></div>
+  <div class="faq-item"><div class="faq-q">Why is APR higher than the stated interest rate?</div><div class="faq-a">APR spreads loan fees over the loan term and adds them to the interest rate. A loan with a 6.5% rate but $3,000 in fees might have a 6.8% APR. The shorter the loan term, the more dramatically fees inflate the APR.</div></div>
+  <div class="faq-item"><div class="faq-q">What is a good APR?</div><div class="faq-a">Good APRs vary by loan type. Mortgages: 6–8% (2025 market); personal loans: 8–15% for excellent credit; credit cards: 15–20% for good credit. Credit card APRs above 24% are typically considered high.</div></div>
+  <div class="faq-item"><div class="faq-q">How does credit card APR work?</div><div class="faq-a">Credit card APR is yearly, but interest is calculated daily (APR ÷ 365 = daily rate). If you pay your full balance each month, you pay zero interest regardless of the APR. Carrying a balance causes daily compounding.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/loan-calculator.html" class="related-card"><div class="related-card-title">Loan Calculator</div><div class="related-card-desc">Calculate loan payments</div></a>
+    <a href="/interest-rate-calculator.html" class="related-card"><div class="related-card-title">Interest Rate Calculator</div><div class="related-card-desc">Back-calculate loan rates</div></a>
+    <a href="/credit-card-payoff-calculator.html" class="related-card"><div class="related-card-title">Credit Card Payoff</div><div class="related-card-desc">Pay off high-APR card debt</div></a>
+    <a href="/mortgage-calculator.html" class="related-card"><div class="related-card-title">Mortgage Calculator</div><div class="related-card-desc">Estimate mortgage costs</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -185,6 +216,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>

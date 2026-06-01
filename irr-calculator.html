@@ -99,6 +99,19 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:13px;width:100%}
 @media(max-width:640px){.header-inner{gap:16px}nav a:not(.nav-cta){display:none}.form-grid{grid-template-columns:1fr}}
+
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);user-select:none}
+.faq-q:hover{background:var(--primary-dim)}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);line-height:1}
+.faq-item.open .faq-q::after{content:'-\2013'}
+.faq-a{display:none;padding:14px 18px;color:var(--text2);font-size:14px;line-height:1.75;border-top:1px solid var(--border);background:var(--bg)}
+.faq-item.open .faq-a{display:block}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:4px}
+.related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;text-decoration:none;display:block;transition:all .15s}
+.related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
+.related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
+.related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 </style>
 </head>
 <body>
@@ -144,6 +157,24 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 
   </div>
   <div class="ad-slot">Advertisement</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is the Internal Rate of Return (IRR)?</div><div class="faq-a">IRR is the discount rate that makes the Net Present Value of all cash flows equal zero. It represents the expected annualized return of an investment. If IRR exceeds your required rate of return, the investment is worth pursuing.</div></div>
+  <div class="faq-item"><div class="faq-q">What is a good IRR?</div><div class="faq-a">IRR benchmarks vary: venture capital targets 25–30%+, private equity seeks 15–25%, real estate deals target 12–20%, public stocks historically return ~10%. Always compare to your hurdle rate or cost of capital.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the relationship between IRR and NPV?</div><div class="faq-a">When the discount rate is below the IRR, NPV is positive (invest). When above IRR, NPV is negative (don't invest). They usually agree on decisions, but NPV is preferred for comparing projects of different sizes.</div></div>
+  <div class="faq-item"><div class="faq-q">What are the limitations of IRR?</div><div class="faq-a">IRR assumes intermediate cash flows are reinvested at the IRR itself — often unrealistic. It can produce multiple values for projects with alternating positive and negative cash flows. NPV is more reliable for comparing different-sized projects.</div></div>
+</div>
+
+<div class="calc-card" style="margin-top:0">
+  <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--primary-light)">Related Calculators</h2>
+  <div class="related-grid">
+    <a href="/npv-calculator.html" class="related-card"><div class="related-card-title">NPV Calculator</div><div class="related-card-desc">Net present value analysis</div></a>
+    <a href="/roi-calculator.html" class="related-card"><div class="related-card-title">ROI Calculator</div><div class="related-card-desc">Return on investment</div></a>
+    <a href="/cagr-calculator.html" class="related-card"><div class="related-card-title">CAGR Calculator</div><div class="related-card-desc">Compound annual growth rate</div></a>
+    <a href="/present-value-calculator.html" class="related-card"><div class="related-card-title">Present Value Calculator</div><div class="related-card-desc">Discount future cash flows</div></a>
+  </div>
+</div>
 </main>
 <footer>
   <div class="footer-inner">
@@ -189,6 +220,8 @@ function calc(){
   showR();
 }
 
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
 </script>
 </body>
 </html>
