@@ -1,0 +1,24 @@
+Create 20 more calculator HTML pages in C:\Users\Administrator\vestcalc\, same style (green #0d9488, GA G-EDVND7BVGL, AdSense ca-pub-1638874323475457):
+
+1. tip-calculator.html - Tip Calculator
+2. sales-tax-calculator.html - Sales Tax Calculator
+3. vat-calculator.html - VAT Calculator
+4. paycheck-calculator.html - Paycheck Calculator
+5. overtime-calculator.html - Overtime Calculator
+6. salary-calculator.html - Salary to Hourly Calculator
+7. cost-of-living-calculator.html - Cost of Living Calculator
+8. home-affordability-calculator.html - Home Affordability Calculator
+9. credit-card-payoff-calculator.html - Credit Card Payoff Calculator
+10. interest-rate-calculator.html - Interest Rate Calculator
+11. simple-interest-calculator.html - Simple Interest Calculator
+12. apr-calculator.html - APR Calculator
+13. roi-calculator.html - ROI Calculator
+14. cagr-calculator.html - CAGR Calculator
+15. present-value-calculator.html - Present Value Calculator
+16. future-value-calculator.html - Future Value Calculator
+17. npv-calculator.html - NPV Calculator
+18. irr-calculator.html - IRR Calculator
+19. lease-calculator.html - Lease Calculator
+20. escrow-calculator.html - Escrow Calculator
+
+Update index.html to add all 20 to the grid. Then push: git -c http.proxy=http://127.0.0.1:7897 -c http.sslVerify=false push origin master

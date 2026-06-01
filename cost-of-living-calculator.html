@@ -112,6 +112,10 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .related-card:hover{border-color:var(--primary);background:var(--primary-dim);transform:translateY(-2px)}
 .related-card-title{font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px}
 .related-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
+
+#btt{position:fixed;bottom:28px;right:28px;width:46px;height:46px;background:var(--primary);color:#fff;border:none;border-radius:50%;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,background .15s;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;padding:0}
+#btt.show{opacity:1;visibility:visible}
+#btt:hover{background:var(--primary-dark)}
 </style>
 </head>
 <body>
@@ -206,6 +210,10 @@ function calc(){
 
 
 document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){this.parentElement.classList.toggle('open');});});
+
+window.addEventListener('scroll',function(){document.getElementById('btt').classList.toggle('show',window.scrollY>300);});
 </script>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
 </body>
 </html>
