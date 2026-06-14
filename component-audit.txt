@@ -1,0 +1,85 @@
+FILE | MISSING CLASSES
+age-calculator.html | breakdown, info-box
+amortization-calculator.html | breakdown
+break-even-calculator.html | breakdown
+cagr-calculator.html | breakdown
+car-loan-calculator.html | breakdown
+carbon-footprint-calculator.html | breakdown
+cash-flow-calculator.html | breakdown
+cgpa-calculator.html | breakdown
+childcare-cost-calculator.html | breakdown
+college-cost-calculator.html | breakdown
+concrete-calculator.html | breakdown
+cost-of-living-calculator.html | breakdown, info-box
+credit-card-payoff-calculator.html | breakdown, info-box
+credit-hours-calculator.html | breakdown
+density-calculator.html | breakdown, info-box
+down-payment-calculator.html | breakdown
+due-date-calculator.html | breakdown, info-box
+electricity-bill-calculator.html | breakdown
+escrow-calculator.html | breakdown, info-box
+exponent-calculator.html | breakdown
+fence-calculator.html | breakdown, info-box
+final-grade-calculator.html | breakdown
+flooring-calculator.html | breakdown
+fraction-calculator.html | breakdown
+fuel-cost-calculator.html | breakdown
+future-value-calculator.html | breakdown
+gpa-calculator.html | breakdown
+grade-calculator.html | breakdown
+home-affordability-calculator.html | breakdown
+home-equity-calculator.html | breakdown
+home-renovation-calculator.html | breakdown, info-box
+ideal-weight-calculator.html | breakdown
+interest-rate-calculator.html | breakdown
+irr-calculator.html | breakdown
+lawn-care-calculator.html | breakdown
+lcm-hcf-calculator.html | breakdown
+loan-calculator.html | breakdown
+logarithm-calculator.html | breakdown
+macro-calculator.html | breakdown, info-box
+matrix-calculator.html | breakdown
+mortgage-calculator.html | breakdown, breakdown-item, bar-wrap, bar-seg, bar-legend, legend-item, legend-dot
+moving-cost-calculator.html | breakdown, info-box
+mpg-calculator.html | breakdown
+mulch-calculator.html | breakdown
+npv-calculator.html | breakdown
+overtime-calculator.html | breakdown
+paint-calculator.html | breakdown
+percentage-calculator.html | breakdown
+personal-loan-calculator.html | breakdown
+pet-cost-calculator.html | breakdown, info-box
+pool-volume-calculator.html | breakdown
+present-value-calculator.html | breakdown
+prime-number-checker.html | breakdown
+probability-calculator.html | breakdown
+quadratic-equation-solver.html | breakdown
+refinance-calculator.html | breakdown
+road-trip-calculator.html | breakdown
+roi-calculator.html | breakdown
+rule-of-72-calculator.html | breakdown
+simple-interest-calculator.html | breakdown
+sleep-calculator.html | info-box
+solar-panel-calculator.html | breakdown
+speed-calculator.html | breakdown
+square-root-calculator.html | breakdown
+statistics-calculator.html | breakdown
+student-loan-calculator.html | breakdown
+test-score-calculator.html | breakdown
+tip-calculator.html | info-box
+unit-conversion-calculator.html | breakdown
+vacation-budget-calculator.html | info-box
+vat-calculator.html | breakdown
+wedding-budget-calculator.html | info-box
+weighted-average-calculator.html | breakdown
+
+Pages with missing component CSS: 73 / 100
+Missing class counts:
+  .breakdown: 69 pages
+  .info-box: 15 pages
+  .breakdown-item: 1 pages
+  .bar-wrap: 1 pages
+  .bar-seg: 1 pages
+  .bar-legend: 1 pages
+  .legend-item: 1 pages
+  .legend-dot: 1 pages
