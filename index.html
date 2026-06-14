@@ -1173,6 +1173,13 @@ function changePage(dir){
 }
 applyFilters();
 window.addEventListener('scroll',function(){document.getElementById('btt').classList.toggle('show',window.scrollY>300);});
+window.addEventListener('popstate',function(){
+  var p=parseInt(sessionStorage.getItem('vc_page')||'1');
+  _page=p;renderPage();
+});
+window.addEventListener('beforeunload',function(){
+  sessionStorage.setItem('vc_page',_page);
+});
 </script>
 
 
