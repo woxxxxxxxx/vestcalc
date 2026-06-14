@@ -227,9 +227,10 @@ function addCGRow(){
   div.innerHTML='<div class="form-group"><label>Semester</label><input type="text" id="cgn'+r+'" placeholder="Fall 2024"></div>'
     +'<div class="form-group"><label>Semester GPA</label><input type="number" id="cgg'+r+'" placeholder="3.5" step="0.01" min="0" max="4"></div>'
     +'<div class="form-group"><label>Credit Hours</label><input type="number" id="cgc'+r+'" placeholder="15" step="0.5" min="0"></div>'
-    +'<div class="form-group" style="justify-content:flex-end;align-items:flex-end"><button type="button" onclick="document.getElementById('cgr'+r+'').remove()" style="padding:10px 16px;background:none;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;color:var(--text2)">Remove</button></div>';
+    +'<div class="form-group" style="justify-content:flex-end;align-items:flex-end"><button type="button" onclick="removeCGPARow('+r+')" style="padding:10px 16px;background:none;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;color:var(--text2)">Remove</button></div>';
   document.getElementById('cgpa-rows').appendChild(div);
 }
+function removeCGPARow(r){var el=document.getElementById('cgr'+r);if(el)el.remove();}
 addCGRow();addCGRow();addCGRow();addCGRow();
 function calc(){
   var pts=0,cred=0;

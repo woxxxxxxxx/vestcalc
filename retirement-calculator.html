@@ -72,11 +72,12 @@ main{max-width:900px;margin:0 auto;padding:40px 20px 80px}
 .form-group label{font-size:13px;font-weight:600;color:var(--text2)}
 .form-group input,.form-group select{padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:15px;color:var(--text);background:var(--bg);outline:none;transition:border .15s}
 .form-group input:focus,.form-group select:focus{border-color:var(--primary)}
-.input-wrap{position:relative}
+.input-wrap{position:relative;display:flex;align-items:center}
+.input-wrap input{width:100%;min-width:0}
 .input-prefix{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--text3);pointer-events:none}
 .input-wrap input{padding-left:26px}
-.input-suffix{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--text3);pointer-events:none}
-.input-wrap.has-suffix input{padding-right:30px}
+.input-suffix{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--text3);pointer-events:none;white-space:nowrap}
+.input-wrap.has-suffix input{padding-right:44px}
 .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
 .result-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:20px;text-align:center}
 .result-box .label{font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}

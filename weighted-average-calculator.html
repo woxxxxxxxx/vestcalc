@@ -226,9 +226,10 @@ function addWARow(){
   div.innerHTML='<div class="form-group"><label>Label</label><input type="text" id="wal'+r+'" placeholder="Item '+r+'"></div>'
     +'<div class="form-group"><label>Value</label><input type="number" id="wav'+r+'" placeholder="85" step="any"></div>'
     +'<div class="form-group"><label>Weight</label><input type="number" id="waw'+r+'" placeholder="1" step="any" min="0"></div>'
-    +'<div class="form-group" style="justify-content:flex-end;align-items:flex-end"><button type="button" onclick="document.getElementById('war'+r+'').remove()" style="padding:10px 16px;background:none;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;color:var(--text2)">Remove</button></div>';
+    +'<div class="form-group" style="justify-content:flex-end;align-items:flex-end"><button type="button" onclick="removeWARow('+r+')" style="padding:10px 16px;background:none;border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;color:var(--text2)">Remove</button></div>';
   document.getElementById('wa-rows').appendChild(div);
 }
+function removeWARow(r){var el=document.getElementById('war'+r);if(el)el.remove();}
 addWARow();addWARow();addWARow();
 function calc(){
   var ws=0,sw=0,sum=0,cnt=0;
