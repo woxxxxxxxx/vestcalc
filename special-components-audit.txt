@@ -1,0 +1,44 @@
+=== 特殊组件问题页面 ===
+bmi-calculator.html | 缺失class：full | JS动态生成：否
+budget-calculator.html | 缺失class：section-header, row-list, divider | JS动态生成：否
+calorie-calculator.html | 缺失class：full | JS动态生成：否
+calories-burned-calculator.html | 缺失class：full | JS动态生成：否
+carbon-footprint-calculator.html | 缺失class：full | JS动态生成：否
+childcare-cost-calculator.html | 缺失class：full | JS动态生成：否
+compound-interest-calculator.html | 缺失class：year-table | JS动态生成：否
+concrete-calculator.html | 缺失class：full | JS动态生成：否
+due-date-calculator.html | 缺失class：full | JS动态生成：否
+fence-calculator.html | 缺失class：full | JS动态生成：否
+home-renovation-calculator.html | 缺失class：full | JS动态生成：否
+lawn-care-calculator.html | 缺失class：full | JS动态生成：否
+lcm-hcf-calculator.html | 缺失class：full | JS动态生成：否
+macro-calculator.html | 缺失class：full | JS动态生成：否
+moving-cost-calculator.html | 缺失class：full | JS动态生成：否
+percentage-calculator.html | 缺失class：pct-row, pct-result | JS动态生成：否
+pet-cost-calculator.html | 缺失class：full | JS动态生成：否
+pool-volume-calculator.html | 缺失class：full | JS动态生成：否
+retirement-calculator.html | 缺失class：status-banner, good, warn, bad | JS动态生成：是
+savings-goal-calculator.html | 缺失class：progress-wrap, progress-label | JS动态生成：否
+sleep-calculator.html | 缺失class：full | JS动态生成：否
+statistics-calculator.html | 缺失class：full | JS动态生成：否
+tax-calculator.html | 缺失class：bracket-table | JS动态生成：否
+vacation-budget-calculator.html | 缺失class：full | JS动态生成：否
+wedding-budget-calculator.html | 缺失class：full | JS动态生成：否
+
+=== 统计 ===
+问题页面总数：25
+最常见缺失class：
+  .full（19页）
+  .section-header（1页）
+  .row-list（1页）
+  .divider（1页）
+  .year-table（1页）
+  .pct-row（1页）
+  .pct-result（1页）
+  .status-banner（1页）
+  .good（1页）
+  .warn（1页）
+  .bad（1页）
+  .progress-wrap（1页）
+  .progress-label（1页）
+  .bracket-table（1页）
