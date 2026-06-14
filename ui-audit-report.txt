@@ -1,0 +1,13 @@
+=== 问题页面汇总（修复后最终状态）===
+(无问题，全站UI一致性良好)
+
+=== 按问题类型统计 ===
+- hero塌陷/缺失：0页
+- calc-card缺失：0页
+- 特殊组件无CSS：0页
+- CSS块缺失：0页
+- btn样式缺失（真实）：0页
+
+=== 注：以下为设计合理的特殊布局，非问题 ===
+- 使用oninput自动计算（无需btn按钮）的页面：loan,mortgage,compound-interest等核心计算器
+- 自定义交互布局：budget-calculator(动态行表格), currency-converter(swap按钮), percentage-calculator(多区块)
