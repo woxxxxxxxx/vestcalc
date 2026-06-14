@@ -1,0 +1,510 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║   VESTCALC.COM — FULL SITE AUDIT REPORT                                ║
+║   Generated: 2026-06-14 09:42:10                              ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+══════════════════════════════════════════════════════════════════════════
+OVERVIEW
+══════════════════════════════════════════════════════════════════════════
+Total HTML files:          106
+Tool pages:                100
+Other pages:               6  (index, about, privacy, terms, contact, 404)
+Site categories:           10  (analysis, budget, debt, education, health, home, math, mortgage, retirement, tax)
+
+CRITICAL ISSUES SUMMARY:
+  !! HTML syntax bug (>>) in index.html:  100 tool cards affected
+  !! Ad slots visible (display:flex):      100 / 100 tool pages
+  !! Missing BreadcrumbList JSON-LD:       100 / 100 tool pages
+  !! Missing static category pages:        10 pages (SEO crawl gap)
+  OK Missing back-to-top:                  0
+  OK Missing FAQ:                          0
+  OK Functional bugs:                      0
+  OK Duplicate related links:              90
+  OK Thin content (<300 words):            0
+
+══════════════════════════════════════════════════════════════════════════
+1. FILE INVENTORY
+══════════════════════════════════════════════════════════════════════════
+Total .html files: 106
+
+Tool pages (100):
+    1. 401k-calculator.html
+    2. age-calculator.html
+    3. amortization-calculator.html
+    4. apr-calculator.html
+    5. balloon-payment-calculator.html
+    6. bmi-calculator.html
+    7. body-fat-calculator.html
+    8. break-even-calculator.html
+    9. budget-calculator.html
+   10. cagr-calculator.html
+   11. calorie-calculator.html
+   12. calories-burned-calculator.html
+   13. car-loan-calculator.html
+   14. carbon-footprint-calculator.html
+   15. cash-flow-calculator.html
+   16. cgpa-calculator.html
+   17. childcare-cost-calculator.html
+   18. college-cost-calculator.html
+   19. compound-interest-calculator.html
+   20. concrete-calculator.html
+   21. cost-of-living-calculator.html
+   22. credit-card-payoff-calculator.html
+   23. credit-hours-calculator.html
+   24. currency-converter.html
+   25. debt-payoff-calculator.html
+   26. density-calculator.html
+   27. dividend-calculator.html
+   28. down-payment-calculator.html
+   29. due-date-calculator.html
+   30. electricity-bill-calculator.html
+   31. emergency-fund-calculator.html
+   32. escrow-calculator.html
+   33. exponent-calculator.html
+   34. fence-calculator.html
+   35. final-grade-calculator.html
+   36. flooring-calculator.html
+   37. fraction-calculator.html
+   38. fuel-cost-calculator.html
+   39. future-value-calculator.html
+   40. gpa-calculator.html
+   41. grade-calculator.html
+   42. home-affordability-calculator.html
+   43. home-equity-calculator.html
+   44. home-renovation-calculator.html
+   45. ideal-weight-calculator.html
+   46. inflation-calculator.html
+   47. interest-rate-calculator.html
+   48. investment-return-calculator.html
+   49. irr-calculator.html
+   50. lawn-care-calculator.html
+   51. lcm-hcf-calculator.html
+   52. lease-calculator.html
+   53. loan-calculator.html
+   54. logarithm-calculator.html
+   55. macro-calculator.html
+   56. matrix-calculator.html
+   57. mortgage-calculator.html
+   58. moving-cost-calculator.html
+   59. mpg-calculator.html
+   60. mulch-calculator.html
+   61. net-worth-calculator.html
+   62. npv-calculator.html
+   63. overtime-calculator.html
+   64. paint-calculator.html
+   65. paycheck-calculator.html
+   66. percentage-calculator.html
+   67. personal-loan-calculator.html
+   68. pet-cost-calculator.html
+   69. pool-volume-calculator.html
+   70. present-value-calculator.html
+   71. prime-number-checker.html
+   72. probability-calculator.html
+   73. quadratic-equation-solver.html
+   74. refinance-calculator.html
+   75. rent-vs-buy-calculator.html
+   76. retirement-calculator.html
+   77. road-trip-calculator.html
+   78. roi-calculator.html
+   79. roth-ira-calculator.html
+   80. rule-of-72-calculator.html
+   81. salary-calculator.html
+   82. sales-tax-calculator.html
+   83. savings-goal-calculator.html
+   84. simple-interest-calculator.html
+   85. sleep-calculator.html
+   86. solar-panel-calculator.html
+   87. speed-calculator.html
+   88. square-root-calculator.html
+   89. statistics-calculator.html
+   90. stock-return-calculator.html
+   91. student-loan-calculator.html
+   92. tax-calculator.html
+   93. test-score-calculator.html
+   94. tip-calculator.html
+   95. unit-conversion-calculator.html
+   96. vacation-budget-calculator.html
+   97. vat-calculator.html
+   98. water-intake-calculator.html
+   99. wedding-budget-calculator.html
+  100. weighted-average-calculator.html
+
+Non-tool pages (6):
+  index.html
+  about.html
+  privacy.html
+  terms.html
+  contact.html
+  404.html
+
+══════════════════════════════════════════════════════════════════════════
+2. SEO AUDIT
+══════════════════════════════════════════════════════════════════════════
+
+--- 2a. Tool Pages (100 pages) ---
+
+  og:image present:         100/100  ✓ PASS
+  og:title present:         100/100  ✓ PASS
+  og:description present:   100/100  ✓ PASS
+  JSON-LD present:          100/100  ✓ PASS
+  canonical present:        100/100  ✓ PASS
+  breadcrumb HTML present:  100/100  ✓ PASS
+  H1 brand-only:              0/100  ✓ PASS
+
+  BreadcrumbList JSON-LD:     0/100  ✗ FAIL — ALL 100 tool pages missing
+  (Tool pages have breadcrumb HTML nav but no BreadcrumbList schema markup)
+
+--- 2b. Other Pages ---
+
+  401k-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  404.html:
+    - missing og:image
+    - missing og:title
+    - missing og:description
+    - missing JSON-LD
+    - missing canonical
+    - missing breadcrumb HTML
+    - missing BreadcrumbList JSON-LD
+  about.html:
+    - missing BreadcrumbList JSON-LD
+  age-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  amortization-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  apr-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  balloon-payment-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  bmi-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  body-fat-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  break-even-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  budget-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  cagr-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  calorie-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  calories-burned-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  car-loan-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  carbon-footprint-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  cash-flow-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  cgpa-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  childcare-cost-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  college-cost-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  compound-interest-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  concrete-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  contact.html:
+    - missing BreadcrumbList JSON-LD
+  cost-of-living-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  credit-card-payoff-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  credit-hours-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  currency-converter.html:
+    - missing BreadcrumbList JSON-LD
+  debt-payoff-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  density-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  dividend-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  down-payment-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  due-date-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  electricity-bill-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  emergency-fund-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  escrow-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  exponent-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  fence-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  final-grade-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  flooring-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  fraction-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  fuel-cost-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  future-value-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  gpa-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  grade-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  home-affordability-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  home-equity-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  home-renovation-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  ideal-weight-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  index.html:
+    - missing breadcrumb HTML
+    - missing BreadcrumbList JSON-LD
+  inflation-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  interest-rate-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  investment-return-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  irr-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  lawn-care-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  lcm-hcf-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  lease-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  loan-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  logarithm-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  macro-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  matrix-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  mortgage-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  moving-cost-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  mpg-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  mulch-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  net-worth-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  npv-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  overtime-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  paint-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  paycheck-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  percentage-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  personal-loan-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  pet-cost-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  pool-volume-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  present-value-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  prime-number-checker.html:
+    - missing BreadcrumbList JSON-LD
+  privacy.html:
+    - missing BreadcrumbList JSON-LD
+  probability-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  quadratic-equation-solver.html:
+    - missing BreadcrumbList JSON-LD
+  refinance-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  rent-vs-buy-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  retirement-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  road-trip-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  roi-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  roth-ira-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  rule-of-72-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  salary-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  sales-tax-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  savings-goal-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  simple-interest-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  sleep-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  solar-panel-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  speed-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  square-root-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  statistics-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  stock-return-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  student-loan-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  tax-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  terms.html:
+    - missing BreadcrumbList JSON-LD
+  test-score-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  tip-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  unit-conversion-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  vacation-budget-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  vat-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  water-intake-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  wedding-budget-calculator.html:
+    - missing BreadcrumbList JSON-LD
+  weighted-average-calculator.html:
+    - missing BreadcrumbList JSON-LD
+
+--- 2c. Sitemap Coverage ---
+  Total URLs in sitemap.xml: 105
+  Tool pages in sitemap:     100/100
+  Homepage (https://vestcalc.com/) in sitemap: YES
+  Coverage: COMPLETE ✓
+
+══════════════════════════════════════════════════════════════════════════
+3. CRITICAL BUG — HTML SYNTAX ERROR IN index.html
+══════════════════════════════════════════════════════════════════════════
+
+BUG: Tool card anchor tags have ">>" instead of ">" after data-category attribute.
+     This creates invalid HTML — the anchor tag never closes properly.
+     Browser may misparse the card links, breaking JS category filtering.
+
+PATTERN:  <a ... data-category="mortgage">>
+SHOULD BE: <a ... data-category="mortgage">
+
+Affected tool cards: 100 / 100  (ALL tool cards in index.html)
+
+Lines affected (first 20 shown):
+  Line 228: ...data-category="mortgage">>...
+  Line 237: ...data-category="mortgage">>...
+  Line 246: ...data-category="retirement">>...
+  Line 255: ...data-category="tax">>...
+  Line 264: ...data-category="retirement">>...
+  Line 273: ...data-category="retirement">>...
+  Line 282: ...data-category="retirement">>...
+  Line 291: ...data-category="debt">>...
+  Line 300: ...data-category="debt">>...
+  Line 309: ...data-category="debt">>...
+  Line 318: ...data-category="mortgage">>...
+  Line 325: ...data-category="mortgage">>...
+  Line 332: ...data-category="mortgage">>...
+  Line 339: ...data-category="mortgage">>...
+  Line 346: ...data-category="mortgage">>...
+  Line 353: ...data-category="mortgage">>...
+  Line 360: ...data-category="mortgage">>...
+  Line 367: ...data-category="mortgage">>...
+  Line 374: ...data-category="mortgage">>...
+  Line 381: ...data-category="mortgage">>...
+  ... and 80 more
+
+Fix: sed -i 's/data-category="\([^"]*\)">>/data-category="\1">/g' index.html
+  or: node -e "(require('fs')).writeFileSync('index.html',(require('fs')).readFileSync('index.html','utf8').replace(/data-category=\"([^\"]+)\">>\s*/g, 'data-category=\"$1\">\n    '))"
+
+══════════════════════════════════════════════════════════════════════════
+4. CONTENT CHECK
+══════════════════════════════════════════════════════════════════════════
+
+--- 4a. Copy-Paste Errors (wrong tool name in FAQ/About) ---
+  Result: NONE detected ✓
+
+--- 4b. Duplicate Related-Tool Links ---
+  Result: NONE detected ✓
+
+--- 4c. Word Count (Thin Content) ---
+  Tool pages with < 300 words: 0  ✓ PASS
+  Average word count:          498 words
+  Minimum:                     443 words (percentage-calculator.html)
+  Maximum:                     534 words
+
+══════════════════════════════════════════════════════════════════════════
+5. UI CHECK
+══════════════════════════════════════════════════════════════════════════
+
+--- 5a. Ad Slots Visibility ---
+  Status: VISIBLE on ALL 100 tool pages  ✗ FAIL
+  CSS:    .ad-slot { display: flex; ... }  — should be display: none
+  Impact: AdSense placeholder boxes show on every tool page (gray dashed box)
+  Fix:    In each tool page <style>, change .ad-slot { display: flex → display: none
+
+--- 5b. Back-to-Top Button ---
+  Status: PRESENT on all 100 tool pages (id="btt")  ✓ PASS
+
+--- 5c. Page Structure (About/FAQ before footer) ---
+  Status: CORRECT on all tool pages  ✓ PASS
+  Order:  calculator → results → FAQ → </main> → <footer>
+
+--- 5d. Static Category Pages ---
+  Status: ALL MISSING  ✗ FAIL
+
+  10 categories found in index.html but no static category pages exist:
+
+  MISSING: /mortgage-calculators.html  (16 tools in this category)
+  MISSING: /home-calculators.html  (15 tools in this category)
+  MISSING: /math-calculators.html  (13 tools in this category)
+  MISSING: /analysis-calculators.html  (10 tools in this category)
+  MISSING: /health-calculators.html  (10 tools in this category)
+  MISSING: /retirement-calculators.html  (9 tools in this category)
+  MISSING: /debt-calculators.html  (9 tools in this category)
+  MISSING: /education-calculators.html  (7 tools in this category)
+  MISSING: /tax-calculators.html  (6 tools in this category)
+  MISSING: /budget-calculators.html  (5 tools in this category)
+
+  Impact: Same SEO issue as WordCaseFix — Google cannot index category landing pages.
+  These would be high-value pages for keywords like "free mortgage calculators",
+  "online tax calculators", "retirement planning calculators" etc.
+
+══════════════════════════════════════════════════════════════════════════
+6. FUNCTIONAL CHECK
+══════════════════════════════════════════════════════════════════════════
+
+  Missing getElementById() IDs:    0  ✓ PASS
+  Undefined onclick functions:      0  ✓ PASS
+  Copy buttons / no clipboard API:  0  ✓ PASS
+  Download buttons / no Blob logic: 0  ✓ PASS
+
+  All 100 tool pages pass functional checks.
+
+══════════════════════════════════════════════════════════════════════════
+PRIORITY FIX LIST
+══════════════════════════════════════════════════════════════════════════
+
+P0 — IMMEDIATE (breaks functionality/user experience):
+  1. Fix >> bug in index.html — 100 tool cards have invalid HTML anchor syntax
+     Script: sed 's/data-category="\([^"]*\)">>/data-category="\1">/g' index.html
+
+P1 — HIGH (hurts SEO/rankings):
+  2. Hide ad slots — Add display:none to .ad-slot CSS on all 100 tool pages
+  3. Add BreadcrumbList JSON-LD to all 100 tool pages
+  4. Create 10 static category pages (mortgage, retirement, tax, health, home,
+     budget, debt, math, education, analysis)
+
+P2 — MEDIUM:
+  5. Fix 404.html — add og:image, og:title, og:description, JSON-LD, canonical
+
+P3 — LOW:
+  6. Add breadcrumb HTML to index.html
+
+══════════════════════════════════════════════════════════════════════════
+END OF AUDIT — vestcalc.com
+Generated: 2026-06-14 09:42:10
