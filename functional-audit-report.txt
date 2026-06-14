@@ -1,0 +1,131 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║   VESTCALC.COM — POST-FIX AUDIT REPORT                                 ║
+║   Generated: 2026-06-14 10:24:40                              ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+═══ STEP 2: Breadcrumb Fix Results ═══
+  Pages fixed (breadcrumb + BreadcrumbList added/updated): 100
+  Pages skipped (no category mapping):                      0
+
+  Still missing breadcrumb HTML: 0
+
+  Still thin BreadcrumbList (<3 items): 0
+
+═══ STEP 3: cat-nav-bar Fix ═══
+  cat-nav-bar onclick buttons converted to real hrefs
+
+═══ STEP 4: Related Desc Fix ═══
+  Total "Free online calculator" replacements: 282
+  Files changed: 100
+    401k-calculator.html
+    age-calculator.html
+    amortization-calculator.html
+    apr-calculator.html
+    balloon-payment-calculator.html
+    bmi-calculator.html
+    body-fat-calculator.html
+    break-even-calculator.html
+    budget-calculator.html
+    cagr-calculator.html
+    calorie-calculator.html
+    calories-burned-calculator.html
+    car-loan-calculator.html
+    carbon-footprint-calculator.html
+    cash-flow-calculator.html
+    cgpa-calculator.html
+    childcare-cost-calculator.html
+    college-cost-calculator.html
+    compound-interest-calculator.html
+    concrete-calculator.html
+    cost-of-living-calculator.html
+    credit-card-payoff-calculator.html
+    credit-hours-calculator.html
+    currency-converter.html
+    debt-payoff-calculator.html
+    density-calculator.html
+    dividend-calculator.html
+    down-payment-calculator.html
+    due-date-calculator.html
+    electricity-bill-calculator.html
+    emergency-fund-calculator.html
+    escrow-calculator.html
+    exponent-calculator.html
+    fence-calculator.html
+    final-grade-calculator.html
+    flooring-calculator.html
+    fraction-calculator.html
+    fuel-cost-calculator.html
+    future-value-calculator.html
+    gpa-calculator.html
+    grade-calculator.html
+    home-affordability-calculator.html
+    home-equity-calculator.html
+    home-renovation-calculator.html
+    ideal-weight-calculator.html
+    inflation-calculator.html
+    interest-rate-calculator.html
+    investment-return-calculator.html
+    irr-calculator.html
+    lawn-care-calculator.html
+    lcm-hcf-calculator.html
+    lease-calculator.html
+    loan-calculator.html
+    logarithm-calculator.html
+    macro-calculator.html
+    matrix-calculator.html
+    mortgage-calculator.html
+    moving-cost-calculator.html
+    mpg-calculator.html
+    mulch-calculator.html
+    net-worth-calculator.html
+    npv-calculator.html
+    overtime-calculator.html
+    paint-calculator.html
+    paycheck-calculator.html
+    percentage-calculator.html
+    personal-loan-calculator.html
+    pet-cost-calculator.html
+    pool-volume-calculator.html
+    present-value-calculator.html
+    prime-number-checker.html
+    probability-calculator.html
+    quadratic-equation-solver.html
+    refinance-calculator.html
+    rent-vs-buy-calculator.html
+    retirement-calculator.html
+    road-trip-calculator.html
+    roi-calculator.html
+    roth-ira-calculator.html
+    rule-of-72-calculator.html
+    salary-calculator.html
+    sales-tax-calculator.html
+    savings-goal-calculator.html
+    simple-interest-calculator.html
+    sleep-calculator.html
+    solar-panel-calculator.html
+    speed-calculator.html
+    square-root-calculator.html
+    statistics-calculator.html
+    stock-return-calculator.html
+    student-loan-calculator.html
+    tax-calculator.html
+    test-score-calculator.html
+    tip-calculator.html
+    unit-conversion-calculator.html
+    vacation-budget-calculator.html
+    vat-calculator.html
+    water-intake-calculator.html
+    wedding-budget-calculator.html
+    weighted-average-calculator.html
+
+═══ STEP 8: Broken Internal Links (72) ═══
+  MISSING: /savings-calculator.html
+  MISSING: /capital-gains-calculator.html
+  MISSING: /rmd-calculator.html
+
+═══ STEP 9: Ad Slot Visibility (0 visible) ═══
+  ✓ All ad slots correctly hidden
+
+═══ OVERALL CONCLUSION ═══
+  Issues remaining:
+    - 72 broken internal links
