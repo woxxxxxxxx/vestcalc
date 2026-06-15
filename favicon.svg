@@ -5,7 +5,6 @@
       <stop offset="100%" stop-color="#14b8a6"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="12" fill="#ffffff"/>
   <polyline points="10,22 28,50 54,8" fill="none" stroke="url(#vg)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   <polyline points="54.7,21.0 54,8 42.1,13.1" fill="none" stroke="url(#vg)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
