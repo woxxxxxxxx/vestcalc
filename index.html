@@ -133,6 +133,17 @@
   /* ── AD SLOT ── */
   .ad-slot{ background: var(--bg2); border: 1px dashed var(--border); border-radius: var(--radius); padding: 24px; text-align: center; color: var(--text3); font-size: 13px; margin: 40px 0; min-height: 90px; display:none; align-items: center; justify-content: center; }
 
+  /* ── GUIDE GRID ── */
+  .guide-section{margin:56px 0 10px}
+  .guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .guide-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-decoration:none;color:inherit;box-shadow:var(--shadow);transition:all .2s}
+  .guide-card:hover{border-color:var(--primary);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+  .guide-card span{display:inline-block;background:var(--primary-dim);color:var(--primary);font-size:11px;font-weight:800;text-transform:uppercase;padding:4px 9px;border-radius:99px;margin-bottom:12px}
+  .guide-card h3{font-size:16px;line-height:1.35;margin-bottom:8px;color:var(--text)}
+  .guide-card p{font-size:13px;color:var(--text2)}
+  .guide-more{margin-top:20px;text-align:center}
+  .guide-more a{display:inline-flex;align-items:center;justify-content:center;background:var(--primary);color:#fff;border-radius:var(--radius-sm);padding:10px 16px;font-size:14px;font-weight:700;text-decoration:none}
+
   /* ── FEATURES ── */
   .features { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px; margin-top: 48px; }
   .feature { text-align: center; padding: 24px 16px; }
@@ -194,6 +205,7 @@
       
       
       
+      <a href="#guides">Guides</a>
       <a href="/blog/">Blog</a>
       <a href="#calculators" class="nav-cta">All 101 Calculators</a>
 </nav>
@@ -279,6 +291,22 @@
 <main>
 
   <!-- Ad Slot Top -->
+  <section id="guides" class="guide-section">
+    <h2 class="section-title">Financial Planning Guides</h2>
+    <p class="section-sub">Detailed guides explain calculator inputs, common mistakes, and scenario checks before you rely on a result.</p>
+    <div class="guide-grid">
+      <a class="guide-card" href="/blog/mortgage-affordability-guide.html"><span>Home</span><h3>Mortgage Affordability Guide: What Payment Can You Really Handle?</h3><p>Estimate payment comfort using income, debt, down payment, reserves, taxes, and insurance.</p></a>
+      <a class="guide-card" href="/blog/compound-interest-guide.html"><span>Investing</span><h3>Compound Interest Guide: How Small Contributions Grow Over Time</h3><p>Understand contribution timing, return assumptions, compounding frequency, and the cost of waiting.</p></a>
+      <a class="guide-card" href="/blog/debt-payoff-strategies.html"><span>Debt</span><h3>Debt Payoff Strategies: Snowball, Avalanche, and Hybrid Plans</h3><p>Compare payoff methods and choose a plan you can sustain beyond the first month.</p></a>
+      <a class="guide-card" href="/blog/emergency-fund-planning.html"><span>Savings</span><h3>Emergency Fund Planning: How Much Cash Should You Keep?</h3><p>Build a reserve based on income stability, family obligations, deductibles, and fixed expenses.</p></a>
+      <a class="guide-card" href="/blog/retirement-calculator-guide.html"><span>Retirement</span><h3>Retirement Calculator Guide: Inputs That Matter Most</h3><p>Improve projections by checking savings rate, inflation, taxes, return assumptions, and withdrawals.</p></a>
+      <a class="guide-card" href="/blog/roi-vs-irr-vs-npv.html"><span>Investing</span><h3>ROI vs. IRR vs. NPV: Choosing the Right Investment Metric</h3><p>Use the right metric for simple returns, uneven cash flows, and capital project decisions.</p></a>
+      <a class="guide-card" href="/blog/budget-calculator-methods.html"><span>Budgeting</span><h3>Budget Calculator Methods for Real Monthly Planning</h3><p>Turn income and expenses into a useful monthly budget without hiding irregular costs.</p></a>
+      <a class="guide-card" href="/blog/student-loan-payoff-guide.html"><span>Loans</span><h3>Student Loan Payoff Guide: Extra Payments and Refinancing Math</h3><p>Evaluate payoff speed, interest savings, refinancing tradeoffs, and payment flexibility.</p></a>
+    </div>
+    <div class="guide-more"><a href="/blog/">View all 27 guides</a></div>
+  </section>
+
   <div class="ad-slot">Advertisement</div>
 
   <section id="calculators">
@@ -1080,6 +1108,7 @@
     <div class="footer-logo">Vest<span>Calc</span></div>
     <div class="footer-links">
       <a href="/about.html">About</a>
+      <a href="/methodology.html">Methodology</a>
       <a href="/privacy.html">Privacy Policy</a>
       <a href="/terms.html">Terms of Use</a>
       <a href="/contact.html">Contact</a>

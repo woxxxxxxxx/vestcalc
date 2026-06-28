@@ -3,102 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | VestCalc</title>
-<meta name="description" content="Calculator guides for loans, savings, investing, taxes, and everyday financial planning.">
+<title>Financial Planning Guides | VestCalc Blog</title>
+<meta name="description" content="Plain-English calculator guides for loans, savings, investing, taxes, home buying, retirement, and everyday financial planning.">
 <link rel="canonical" href="https://vestcalc.com/blog/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDVND7BVGL"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EDVND7BVGL');</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--primary:#0d9488;--bg:#f8fafc;--card:#fff;--text:#172033;--muted:#566176;--line:#e5e7eb;--soft:rgba(29,78,216,.08)}
+:root{--primary:#0d9488;--bg:#f8fafc;--card:#fff;--text:#172033;--muted:#566176;--line:#e5e7eb;--soft:rgba(13,148,136,.1)}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 a{text-decoration:none;color:inherit}
 header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
 .header-inner{max-width:1120px;margin:0 auto;height:60px;padding:0 20px;display:flex;align-items:center;gap:20px}
-.logo{font-weight:800;font-size:20px}
-nav{margin-left:auto;display:flex;gap:8px}
+.logo{font-weight:800;font-size:20px}nav{margin-left:auto;display:flex;gap:8px}
 nav a{font-size:14px;font-weight:650;color:var(--muted);padding:7px 12px;border-radius:8px}
 nav a:hover{background:var(--soft);color:var(--primary)}
-.hero{background:linear-gradient(135deg,var(--primary),#0f172a);color:#fff;padding:56px 20px;text-align:center}
+.hero{background:linear-gradient(135deg,#0f766e,#0d9488,#14b8a6);color:#fff;padding:56px 20px;text-align:center}
 .hero h1{font-size:clamp(2rem,5vw,3rem);letter-spacing:-.04em;margin-bottom:10px}
-.hero p{max-width:680px;margin:0 auto;color:rgba(255,255,255,.86);font-size:17px}
+.hero p{max-width:760px;margin:0 auto;color:rgba(255,255,255,.9);font-size:17px}
 main{max-width:1120px;margin:0 auto;padding:42px 20px 70px}
+.intro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:24px;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 8px 28px rgba(15,23,42,.05);transition:transform .18s,border-color .18s}
 .card:hover{transform:translateY(-3px);border-color:var(--primary)}
 .card span{display:inline-block;background:var(--soft);color:var(--primary);font-size:11px;font-weight:800;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px}
 .card h2{font-size:19px;line-height:1.3;margin-bottom:10px;letter-spacing:-.02em}
-.card p{color:var(--muted);font-size:14px;margin-bottom:18px}
-.card strong{color:var(--primary);font-size:14px}
+.card p{color:var(--muted);font-size:14px;margin-bottom:18px}.card strong{color:var(--primary);font-size:14px}
 footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:13px;padding:26px 20px;text-align:center}
+footer a{color:var(--primary)}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.grid{grid-template-columns:1fr}.header-inner{height:auto;min-height:60px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}nav{margin-left:0}}
 </style>
 </head>
 <body>
-<header><div class="header-inner"><a class="logo" href="/">VestCalc</a><nav><a href="/">Tools</a><a href="/blog/">Blog</a><a href="/mortgage-calculator.html">Use Calculators</a></nav></div></header>
-<section class="hero"><h1>VestCalc Blog</h1><p>Calculator guides for loans, savings, investing, taxes, and everyday financial planning.</p></section>
-<main><div class="grid">
+<header><div class="header-inner"><a class="logo" href="/">VestCalc</a><nav><a href="/">Tools</a><a href="/blog/">Blog</a><a href="/methodology.html">Methodology</a></nav></div></header>
+<section class="hero"><h1>VestCalc Financial Planning Guides</h1><p>Calculator guides for loans, savings, investing, taxes, housing, retirement, and everyday planning decisions.</p></section>
+<main>
+<div class="intro">These guides explain how VestCalc calculators should be used: what inputs matter, which assumptions can change the result, and how to compare scenarios before making a financial decision.</div>
+<div class="grid">
     <a class="card" href="/blog/mortgage-affordability-guide.html">
       <span>Home</span>
       <h2>Mortgage Affordability Guide: What Payment Can You Really Handle?</h2>
-      <p>Estimate payment comfort using income, debt, down payment, and cash reserves.</p>
+      <p>Estimate payment comfort using income, debt, down payment, reserves, taxes, and insurance.</p>
       <strong>Read guide</strong>
     </a>
 
     <a class="card" href="/blog/compound-interest-guide.html">
       <span>Investing</span>
       <h2>Compound Interest Guide: How Small Contributions Grow Over Time</h2>
-      <p>Understand contribution timing, return assumptions, and the cost of waiting.</p>
+      <p>Understand contribution timing, return assumptions, compounding frequency, and the cost of waiting.</p>
       <strong>Read guide</strong>
     </a>
 
     <a class="card" href="/blog/debt-payoff-strategies.html">
       <span>Debt</span>
       <h2>Debt Payoff Strategies: Snowball, Avalanche, and Hybrid Plans</h2>
-      <p>Compare payoff methods and choose one you can sustain.</p>
+      <p>Compare payoff methods and choose a plan you can sustain beyond the first month.</p>
       <strong>Read guide</strong>
     </a>
 
     <a class="card" href="/blog/emergency-fund-planning.html">
       <span>Savings</span>
       <h2>Emergency Fund Planning: How Much Cash Should You Keep?</h2>
-      <p>Build a reserve based on income stability, family obligations, and fixed expenses.</p>
+      <p>Build a reserve based on income stability, family obligations, deductibles, and fixed expenses.</p>
       <strong>Read guide</strong>
     </a>
 
     <a class="card" href="/blog/retirement-calculator-guide.html">
       <span>Retirement</span>
       <h2>Retirement Calculator Guide: Inputs That Matter Most</h2>
-      <p>Improve projections by checking savings rate, inflation, taxes, and withdrawal assumptions.</p>
+      <p>Improve projections by checking savings rate, inflation, taxes, return assumptions, and withdrawals.</p>
       <strong>Read guide</strong>
     </a>
 
     <a class="card" href="/blog/roi-vs-irr-vs-npv.html">
       <span>Investing</span>
       <h2>ROI vs. IRR vs. NPV: Choosing the Right Investment Metric</h2>
-      <p>Use the right metric for simple returns, uneven cash flows, and project decisions.</p>
+      <p>Use the right metric for simple returns, uneven cash flows, and capital project decisions.</p>
       <strong>Read guide</strong>
     </a>
 
     <a class="card" href="/blog/budget-calculator-methods.html">
       <span>Budgeting</span>
       <h2>Budget Calculator Methods for Real Monthly Planning</h2>
-      <p>Turn income and expenses into a useful budget without overcomplicating it.</p>
+      <p>Turn income and expenses into a useful monthly budget without hiding irregular costs.</p>
       <strong>Read guide</strong>
     </a>
 
     <a class="card" href="/blog/student-loan-payoff-guide.html">
       <span>Loans</span>
       <h2>Student Loan Payoff Guide: Extra Payments and Refinancing Math</h2>
-      <p>Evaluate payoff speed, interest savings, and refinancing tradeoffs.</p>
+      <p>Evaluate payoff speed, interest savings, refinancing tradeoffs, and payment flexibility.</p>
       <strong>Read guide</strong>
     </a>
 
     <a class="card" href="/blog/tax-calculator-planning.html">
       <span>Tax</span>
       <h2>Tax Calculator Planning: Estimate Withholding Before Year-End</h2>
-      <p>Use rough tax estimates to avoid surprises and adjust withholding early.</p>
+      <p>Use rough tax estimates to avoid surprises and adjust withholding before it is too late.</p>
       <strong>Read guide</strong>
     </a>
 
@@ -108,7 +110,126 @@ footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);font-
       <p>Include maintenance, opportunity cost, transaction fees, insurance, and flexibility.</p>
       <strong>Read guide</strong>
     </a>
+
+    <a class="card" href="/blog/apr-vs-interest-rate.html">
+      <span>Loans</span>
+      <h2>APR vs. Interest Rate: Why the Smaller Number Can Cost More</h2>
+      <p>Compare quoted rates with fees, points, and loan term so two offers become comparable.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/amortization-schedule-guide.html">
+      <span>Loans</span>
+      <h2>Amortization Schedule Guide: Reading Principal and Interest Over Time</h2>
+      <p>See why early payments are interest-heavy and how extra payments change the schedule.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/down-payment-planning.html">
+      <span>Housing</span>
+      <h2>Down Payment Planning: Balancing Cash, Payment, and Risk</h2>
+      <p>Decide how much cash to put down without draining reserves or ignoring total housing cost.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/refinance-break-even-guide.html">
+      <span>Loans</span>
+      <h2>Refinance Break-Even Guide: When a Lower Rate Actually Helps</h2>
+      <p>Compare closing costs, payment savings, loan restart risk, and how long you will keep the loan.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/credit-card-payoff-mistakes.html">
+      <span>Debt</span>
+      <h2>Credit Card Payoff Mistakes That Make Balances Last Longer</h2>
+      <p>Avoid minimum-payment traps, fee surprises, and payoff plans that collapse after one billing cycle.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/savings-goal-timeline.html">
+      <span>Savings</span>
+      <h2>Savings Goal Timeline: How Much to Save Each Month</h2>
+      <p>Translate a target date and amount into a monthly savings plan with room for real life.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/inflation-planning-guide.html">
+      <span>Planning</span>
+      <h2>Inflation Planning Guide: Making Future Dollars Comparable</h2>
+      <p>Adjust prices, income, and goals so long-term estimates are not stuck in today’s dollars.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/net-worth-tracking-guide.html">
+      <span>Planning</span>
+      <h2>Net Worth Tracking Guide: Assets, Liabilities, and Progress</h2>
+      <p>Use net worth as a trend line while avoiding noisy month-to-month conclusions.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/cash-flow-planning-guide.html">
+      <span>Business</span>
+      <h2>Cash Flow Planning Guide for Irregular Income and Expenses</h2>
+      <p>Separate profit from timing so bills, taxes, and seasonal expenses do not sneak up.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/car-loan-total-cost.html">
+      <span>Auto</span>
+      <h2>Car Loan Total Cost: Payment, Interest, Fees, and Trade-In Math</h2>
+      <p>Compare vehicle offers using the total cost of ownership instead of only monthly payment.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/home-equity-borrowing-guide.html">
+      <span>Housing</span>
+      <h2>Home Equity Borrowing Guide: Payment Risk and Loan-to-Value</h2>
+      <p>Check how a second lien or equity draw changes monthly cash flow and home risk.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/dividend-yield-guide.html">
+      <span>Investing</span>
+      <h2>Dividend Yield Guide: Income, Growth, and Sustainability</h2>
+      <p>Look beyond headline yield and compare dividends with price movement and payout risk.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/cagr-investment-growth.html">
+      <span>Investing</span>
+      <h2>CAGR Guide: Measuring Growth Without Being Fooled by Volatility</h2>
+      <p>Use CAGR to summarize multi-year growth while remembering what it hides.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/npv-decision-guide.html">
+      <span>Business</span>
+      <h2>NPV Decision Guide: Turning Future Cash Flows Into Today’s Value</h2>
+      <p>Use a discount rate and cash-flow timing to compare projects on a more realistic basis.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/lease-vs-buy-car-guide.html">
+      <span>Auto</span>
+      <h2>Lease vs. Buy Car Guide: Comparing Flexibility and Total Cost</h2>
+      <p>Compare mileage limits, residual value, financing cost, and how long you keep vehicles.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/paycheck-withholding-guide.html">
+      <span>Tax</span>
+      <h2>Paycheck Withholding Guide: Estimating Take-Home Pay Before Changes</h2>
+      <p>Model deductions, taxes, benefits, and filing choices before changing a job or payroll form.</p>
+      <strong>Read guide</strong>
+    </a>
+
+    <a class="card" href="/blog/college-cost-planning-guide.html">
+      <span>Education</span>
+      <h2>College Cost Planning Guide: Tuition, Aid, Loans, and Family Cash Flow</h2>
+      <p>Estimate annual and four-year costs before aid letters or loan choices become urgent.</p>
+      <strong>Read guide</strong>
+    </a>
 </div></main>
-<footer>&copy; 2026 VestCalc &middot; <a href="/privacy.html">Privacy</a></footer>
+<footer>&copy; 2026 VestCalc &middot; <a href="/about.html">About</a> &middot; <a href="/methodology.html">Methodology</a> &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/blog/">Blog</a></footer>
 </body>
 </html>
