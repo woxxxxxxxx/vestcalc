@@ -30,3 +30,9 @@
 - 首页新增 Financial Planning Guides 区块，提升原创内容入口权重。
 - 101 个工具页批量替换重复的泛化 FAQ 与 Personal Financial Planning 用例，降低模板重复信号。
 - 更新 sitemap.xml，包含全部博客、方法论页和工具页，lastmod 更新为 2026-06-28。
+
+
+## 2026-07-01 search-click acceleration
+- Added 3 search-intent guide hub pages based on recent Search Console exposure.
+- Updated title/meta descriptions for high-impression, low-CTR pages and added a homepage entry block for the new guides.
+- Regenerated sitemap.xml with lastmod=2026-07-01. Goal: improve long-tail relevance, internal link strength, and search-result click clarity.
