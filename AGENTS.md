@@ -36,3 +36,8 @@
 - Added 3 search-intent guide hub pages based on recent Search Console exposure.
 - Updated title/meta descriptions for high-impression, low-CTR pages and added a homepage entry block for the new guides.
 - Regenerated sitemap.xml with lastmod=2026-07-01. Goal: improve long-tail relevance, internal link strength, and search-result click clarity.
+
+## 2026-07-11 AdSense low-value remediation
+- The prior fix added words but left a broad, template-heavy inventory. VestCalc is now focused on financial planning: 56 off-topic health, math, science, and home-utility pages/guides are noindex, excluded from the sitemap, and contain no AdSense loader.
+- Added editorial-policy.html with formula testing, scenario ranges, dated source rules, and correction standards. Current sitemap contains 94 indexable pages.
+- Do not resubmit immediately; allow the new sitemap and noindex directives to be recrawled first.
