@@ -174,8 +174,10 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
 .section-header{display:flex;align-items:center;justify-content:space-between;margin:16px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--primary-light)}.section-header h3{font-size:15px;font-weight:700;color:var(--text);margin:0}.row-list{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}.divider{height:1px;background:var(--border);border:none;margin:16px 0}
 </style>
 <link rel="stylesheet" href="/assets/css/tool-modules.css">
+<style>.portfolio-skip-link{position:fixed;left:12px;top:12px;z-index:10000;padding:.65rem .9rem;background:#111827;color:#fff;border-radius:4px;transform:translateY(-160%)}.portfolio-skip-link:focus{transform:none}</style>
 </head>
 <body>
+<a class="portfolio-skip-link" href="#main-content">Skip to main content</a>
 <header>
   <div class="header-inner">
     <a href="/" class="logo"><img src="/logo.svg" alt="VestCalc" height="40"></a>
@@ -189,7 +191,7 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
   <p>Track your monthly income and expenses to see exactly where your money goes.</p>
 </div>
 
-<main>
+<main id="main-content">
     <div class="ad-slot">Advertisement</div>
 
   <div class="calc-card">
@@ -289,7 +291,7 @@ footer{background:var(--text);color:#94a3b8;padding:40px 20px}
       <a href="/methodology.html">Methodology</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Use</a><a href="/contact.html">Contact</a></div>
     <p class="footer-copy">&copy; 2026 VestCalc. All rights reserved.</p>
   </div>
-</footer>
+<p class="editorial-policy-link"><a href="editorial-policy.html">Editorial Policy</a></p></footer>
 
 <script>
 var incomeRows=[{label:'Salary',amount:4500},{label:'Side Income',amount:500}];
@@ -302,7 +304,7 @@ function render(type){
   arr.forEach(function(row,i){
     var div=document.createElement('div');
     div.className='budget-row';
-    div.innerHTML='<input type="text" placeholder="Label" value="'+row.label+'" oninput="updateRow(\''+type+'\','+i+',\'label\',this.value)"><input type="number" placeholder="Amount" value="'+row.amount+'" min="0" step="0.01" oninput="updateRow(\''+type+'\','+i+',\'amount\',this.value)"><button class="btn-remove" onclick="removeRow(\''+type+'\','+i+')">✕</button>';
+    div.innerHTML='<input type="text" placeholder="Label" value="'+row.label+'" oninput="updateRow(\''+type+'\','+i+',\'label\',this.value)" aria-label="Label"><input type="number" placeholder="Amount" value="'+row.amount+'" min="0" step="0.01" oninput="updateRow(\''+type+'\','+i+',\'amount\',this.value)" aria-label="Amount"><button class="btn-remove" onclick="removeRow(\''+type+'\','+i+')">✕</button>';
     container.appendChild(div);
   });
   calcTotals();
