@@ -41,3 +41,12 @@
 - The prior fix added words but left a broad, template-heavy inventory. VestCalc is now focused on financial planning: 56 off-topic health, math, science, and home-utility pages/guides are noindex, excluded from the sitemap, and contain no AdSense loader.
 - Added editorial-policy.html with formula testing, scenario ranges, dated source rules, and correction standards. Current sitemap contains 94 indexable pages.
 - Do not resubmit immediately; allow the new sitemap and noindex directives to be recrawled first.
+
+## 2026-08-08 approval-surface follow-up
+
+- Rechecked VestCalc with the portfolio-wide hard and value gates rather than relying on the article-only audit.
+- Expanded the guide index, all five guide research records, and the four remaining thin category hubs.
+- Current public surface: 30 indexable URLs, 12 retained calculators, 5 category hubs, 5 guides, and 0 reachable held URLs.
+- Final gates: 0 hard failures, 0 content pages under 350 words, 0 editorial pages under 700 words, 0 tools under 450 words, 0 duplicate pairs, and 0 mojibake flags.
+- Editorial median: 807 words. Article median: 874 words. Structural validation: 30 pages, 369 internal links, 58 local resources, 30 executable scripts, and 27 JSON-LD blocks with 0 errors.
+- Earliest recommended manual AdSense resubmission remains 2026-08-21 after a stable crawl window; approval is not guaranteed.

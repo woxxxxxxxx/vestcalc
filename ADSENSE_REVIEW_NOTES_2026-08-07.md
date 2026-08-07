@@ -33,3 +33,13 @@
 ## Review timing
 
 Do not treat these checks as a guarantee of AdSense approval. Keep the deployed surface stable and monitor Search Console crawling and indexing before resubmission. Earliest recommended manual review date: 2026-08-21, provided production checks remain clean and no broad template changes are made during the stability window.
+
+## 2026-08-08 follow-up gate hardening
+
+- The combined 15-site value gate exposed a narrow VestCalc regression that the original article-only gate did not: the six-page editorial surface had a 687-word median because the guide index and three guides sat near the 700-word threshold.
+- Rebuilt the guide index as a decision library with document requirements, source-selection rules, correction routing, and a reproducible decision-log workflow.
+- Added topic-specific research records to all five guides and expanded the four remaining thin category hubs with distinct reconciliation, stop-condition, walk-away, and payroll-diagnostic workflows.
+- Final combined metrics: 30 indexable URLs, 0 reachable `noindex` URLs, 0 content pages under 350 words, 0 editorial pages under 700 words, 0 retained tools under 450 words, 0 duplicate pairs, 0 mojibake flags, and 0 hard release-gate failures.
+- Editorial median is now 807 words; article median is 874 words; first-person reproducible research records are present on 6 / 6 editorial pages. The focused structural pass checked 30 pages, 369 internal links, 58 local resources, 30 executable scripts, and 27 JSON-LD blocks with 0 errors.
+- The 120 historical `noindex` files remain isolated, absent from the sitemap, and unreachable from the public link graph. They are a maintenance warning, not a release-gate failure.
+- Keep the existing stability window. Do not manually resubmit before 2026-08-21 unless Google has already started an earlier review.
